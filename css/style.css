@@ -1,0 +1,22 @@
+h1 {
+text-align: center;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    padding-right: 30px;
+    font-size: 30px;
+}
+
+body {
+
+}
+
+a{
+    text-decoration: none;
+    color: rgb(2, 2, 2);
+}
+
