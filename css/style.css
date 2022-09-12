@@ -1,4 +1,4 @@
-.titulogeneros{
+    .titulogeneros{
     text-align: center;
     margin: 0px;
     text-decoration: none;
@@ -22,11 +22,12 @@
     }
     
     .body-generos{
-        background-image: url(../background\ generos.jpeg);
+        background-image: url(../backgroundgeneros.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
         margin: 0px;
     }
+
     a{
         text-decoration: none;
         color: rgb(2, 2, 2);
@@ -38,13 +39,13 @@
 
     }
 
-    .backgroundgeneros{
-        background-image: url(../practicar/background\ generos.jpeg);
+    .article-generos{
+        background-image: url(../background\ generos\ 1.jpeg);
     }
 
     @media(max-width: 756px) {
         
     }
     @media(min-width: 500px){
-        
+
     }
