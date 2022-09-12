@@ -1,22 +1,50 @@
-h1 {
-text-align: center;
-}
-
-ul {
-    display: flex;
-}
-
-li {
-    padding-right: 30px;
-    font-size: 30px;
-}
-
-body {
-
-}
-
-a{
+.titulogeneros{
+    text-align: center;
+    margin: 0px;
     text-decoration: none;
-    color: rgb(2, 2, 2);
-}
+    background-color: rgb(248, 247, 248);
+    font-size: xx-large;
+    }
+    
+    .lista-generos {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 25px;
+        background-color: rgb(249, 246, 251);
+        list-style: none;
+        
+    }
+    
+    .genero-terror, .genero-romance,.genero-accion, .genero-cienciaficcion {
+        padding-right: 30px;
+        font-size: 30px;
+    }
+    
+    .body-generos{
+        background-image: url(../background\ generos.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0px;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(2, 2, 2);
+    }
+    
+    .titulopeliculas{
+        text-align: center;
+        background-color: rgb(190, 185, 196);
 
+    }
+
+    .backgroundgeneros{
+        background-image: url(../practicar/background\ generos.jpeg);
+    }
+
+    @media(max-width: 756px) {
+        
+    }
+    @media(min-width: 500px){
+        
+    }
