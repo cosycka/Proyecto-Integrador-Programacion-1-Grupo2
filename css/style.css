@@ -2,11 +2,12 @@
     text-align: center;
     margin: 0px;
     text-decoration: none;
-    background-color: rgb(248, 247, 248);
+    background-color: rgb(248, 231, 248);
     font-size: xx-large;
+    padding: 10px;
     }
     
-    .lista-generos {
+    .lista-generos, .lista-generos-series {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -16,7 +17,7 @@
         
     }
     
-    .genero-terror, .genero-romance,.genero-accion, .genero-cienciaficcion {
+    .genero-terror, .genero-romance,.genero-accion, .genero-cienciaficcion, .genero-fantasia, .genero-drama {
         padding-right: 30px;
         font-size: 30px;
     }
@@ -33,14 +34,23 @@
         color: rgb(2, 2, 2);
     }
     
-    .titulopeliculas{
+    .titulopeliculas, .tituloseries{
         text-align: center;
         background-color: rgb(190, 185, 196);
+        padding: 5px;
 
     }
 
     .article-generos{
         background-image: url(../background\ generos\ 1.jpeg);
+    }
+
+    .articleseries {
+        padding: 20px;
+    }
+
+    .articlepeliculas {
+        padding: 20px;
     }
 
     @media(max-width: 756px) {
@@ -49,3 +59,5 @@
     @media(min-width: 500px){
 
     }
+
+    
