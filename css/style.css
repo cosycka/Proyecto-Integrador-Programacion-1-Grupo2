@@ -34,6 +34,9 @@ footer{
     background-color: #6d28a1;
     color: white;
     font-size: larger;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 
 }
 
@@ -349,6 +352,8 @@ a.img{
     text-decoration: none;
     font-size: xx-large;
     padding: 10px;
+    background: #6d28a1;
+
 }
 
 .lista-generos,
@@ -361,6 +366,9 @@ a.img{
 
 }
 
+.liBottom {
+    margin-top: 40px !important;
+}
 
 .genero-terror,
 .genero-romance,
@@ -379,7 +387,7 @@ a.img{
 }
 
 .body-generos {
-    background-image: url(../img/backgroundgeneros.jpeg);
+    background: #37404b;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0px;
@@ -405,14 +413,28 @@ a {
     padding: 20px;
 }
 
-@media(max-width: 756px) {}
-
-@media(min-width: 500px) {}
-
+.genero-drama, .genero-fantasia, .genero-accion, .genero-drama,{
+    color: white;
+}
 
 /* Estilo DETALLE DEL GENERO (detail-genres) */
 
+.bodydetail {
+    background-color: #37404b;
+}
 
+.tituloterror {
+    text-align: center;
+    margin: 20px;
+    text-decoration: none;
+    font-size: xx-large;
+    padding: 10px;
+    color: white;
+    background: rgba(110, 93, 151, 0.824);
+}
 
+@media(max-width: 756px) {}
+
+@media(min-width: 500px) {}
 
 /* Estilo RESULTADO DE BUSQUEDA (search-results) */

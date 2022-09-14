@@ -11,23 +11,37 @@
 
 <body class="body-generos">
     <header>
-        <article>
+        <section class="header">
+            <div class="logo">
+                <img src="./img/LOGO.png" width="155" height="90" alt="" class="logo">
+            </div>
+            <nav class="nav">
+                        <a href="./index.html" class="nav">Home</a>
+                        <a href="" class="nav">Peliculas</a>
+                        <a href="./favorite.html" class="nav">Favoritos</a>
+                        <a href="./genres.html" class="nav">Generos</a> 
+            </nav>
 
-        </article>
+            <form action="./search-results.html" method="post" target="_blank">
+                <p>
+                <input type="search" name="busquedacodigo" size="9" maxlength="9">
+                <input type="submit" value="Buscar">
+                </p>
+            </form>
+        </section>
     </header>
 
     <main>
 
-        <section>
+        <section class="article-generos" >
 
-            <article class="article-generos">
+            
 
                 <article class="articlepeliculas">
 
                     <h1 class="titulogeneros">Géneros</h1>
-
+                    <br><br>
                     <h2 class="titulopeliculas">Peliculas</h2>
-
                     <ul class="lista-generos">
                         
                         <li class="genero-terror">Terror
@@ -46,40 +60,34 @@
                     </ul>
 
                 </article>
-
+                
                 <article class="articleseries">
                     <h2 class="tituloseries">Series</h2>
-
+                    
                     <ul class="lista-generos-series">
-                        <li class="genero-terror">Terror
-                            <a href="detail-genres.html"></a>
+                        
+                        <li class="genero-terror liBottom">
+                                <a href="detail-genres.html">Terror</a>
                         </li>
-                        <li class="genero-fantasia">Fantasia
-                            <a href="detail-genres.html"></a>
+                        <li class="genero-fantasia liBottom">
+                            <a href="detail-genres.html">Fantasia</a>
                         </li>
-                        <li class="genero-accion">Acción
-                            <a href="detail-genres.html"></a>
+                        <li class="genero-accion liBottom">
+                            <a href="detail-genres.html">Acción</a>
                         </li>
-                        <li class="genero-drama">Drama
-                            <a href="detail-genres.html"></a>
+                        <li class="genero-drama liBottom">
+                                <a href="./detail-genres.html">Drama</a>
                         </li>
                         
                     </ul>
-
+                    
                 </article>
-
-            </article>
-
-
-
+            
         </section>
 
     </main>
 
-
-    <footer>
-
-    </footer>
+    <footer> Guillermina Scarcella Harguindeguy, Tali Gajer y Catalina Osyca </footer>
 </body>
 
 </html>
