@@ -3,13 +3,88 @@
 }
 
 /* Estilo HEADER Y FOOTER */
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6d28a1;
+}
 
-
+a.nav{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: white;
+    font-size: 35px;
+}
 
 
 /* Estilo HOME (index) */
+a{
+    display: flex;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.listados{
+    color: white;
+    text-align: center;
+
+}
 
 
+
+.caja{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+li{
+    list-style-type: none;
+}
+
+.textoindex{
+    color: white;
+    text-align: center;
+}
+
+.cuerpo{
+    background-color: #37404b;
+}
+
+a.img{
+    display: flex;
+    background-color: #6d28a1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: white;
+    justify-content: flex-start;
+    width: fit-content;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6d28a1;
+    color: white;
+    font-size: larger;
+
+}
 
 
 /* Estilo DETALLE PELICULAS (detail-movie) */
