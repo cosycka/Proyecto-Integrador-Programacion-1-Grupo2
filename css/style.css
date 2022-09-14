@@ -13,16 +13,19 @@
 }
 
 a.nav{
-    display: flex;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 30px;
-    padding-left: 30px;
     color: white;
     font-size: 35px;
     background-color: #1e20619e ;
+    padding: 1%;
+    justify-content: space-around;
+    width: 250px;
+    border-radius: 5%;
 }
 
+nav.nav{
+    display: flex;
+    justify-content: space-between;
+}
 
 
 footer{
@@ -31,7 +34,7 @@ footer{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #6d28a1;
+    background-color: rgb(131, 72, 133);
     color: white;
     font-size: larger;
     position: absolute;
@@ -56,10 +59,9 @@ nav{
     color: white;
     text-align: center;
     background-color: #1e20619e;
+    background-size: 100%;
 
 }
-
-
 
 .caja{
     display: flex;
@@ -83,14 +85,15 @@ li{
 
 a.img{
     display: flex;
-    background-color: #6d28a1;
+    background-color: rgb(131, 72, 133);
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 15px;
     padding-left: 15px;
     color: white;
-    justify-content: flex-start;
     width: fit-content;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
