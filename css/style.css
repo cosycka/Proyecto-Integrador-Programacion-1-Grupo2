@@ -20,6 +20,21 @@ a.nav{
     padding-left: 30px;
     color: white;
     font-size: 35px;
+    background-color: #1e20619e ;
+}
+
+
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6d28a1;
+    color: white;
+    font-size: larger;
+
 }
 
 
@@ -74,17 +89,7 @@ a.img{
     width: fit-content;
 }
 
-footer{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #6d28a1;
-    color: white;
-    font-size: larger;
 
-}
 
 
 /* Estilo DETALLE PELICULAS (detail-movie) */
