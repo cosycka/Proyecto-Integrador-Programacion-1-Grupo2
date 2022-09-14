@@ -341,7 +341,6 @@ footer{
     text-align: center;
     margin: 0px;
     text-decoration: none;
-    background-color: rgb(248, 231, 248);
     font-size: xx-large;
     padding: 10px;
 }
@@ -352,10 +351,10 @@ footer{
     justify-content: space-around;
     align-items: center;
     padding: 25px;
-    background-color: rgb(249, 246, 251);
     list-style: none;
 
 }
+
 
 .genero-terror,
 .genero-romance,
@@ -365,6 +364,12 @@ footer{
 .genero-drama {
     padding-right: 30px;
     font-size: 30px;
+    background: rgba(93, 96, 151, 0.824);
+    width: 150px;
+    text-align: center;
+    margin: 10px 0px;
+    padding: 10px;
+    color: beige;
 }
 
 .body-generos {
@@ -382,8 +387,7 @@ a {
 .titulopeliculas,
 .tituloseries {
     text-align: center;
-    background-color: rgb(190, 185, 196);
-    padding: 5px;
+    background: rgba(93, 96, 151, 0.824);
 
 }
 
