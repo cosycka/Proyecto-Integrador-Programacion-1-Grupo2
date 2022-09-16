@@ -375,7 +375,9 @@ ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
     padding: 25px;
+
 }
 
 .genero-terror,
@@ -427,9 +429,6 @@ ul{
     text-align: center;
 }
 
-.main{
-    height: 85vh;
-}
 
 /* Estilo DETALLE DEL GENERO (detail-genres) */
 
