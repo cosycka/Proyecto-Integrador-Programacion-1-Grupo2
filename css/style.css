@@ -10,16 +10,18 @@
     justify-content: space-around;
     align-items: center;
     background-color: #6d28a1;
+    background-size: cover;
 }
 
 a.nav{
+    justify-content: space-around;
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     background-color: #1e20619e ;
     padding: 1%;
-    justify-content: space-around;
     width: 250px;
     border-radius: 5%;
+    margin: 10px;
 }
 
 nav.nav{
@@ -36,9 +38,7 @@ footer{
     align-items: center;
     background-color: rgb(131, 72, 133);
     color: white;
-    font-size: larger;
-    position: absolute;
-    bottom: 0px;
+    font-size: 25px;
     width: 100%;
 
 }
@@ -60,6 +60,7 @@ nav{
     text-align: center;
     background-color: #1e20619e;
     background-size: 100%;
+    font-size: 30px;
 
 }
 
@@ -83,17 +84,20 @@ li{
     background-color: #37404b;
 }
 
-a.img{
-    display: flex;
+a.img{ /*boton ver mas*/
     background-color: rgb(131, 72, 133);
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 15px;
     padding-left: 15px;
     color: white;
-    width: fit-content;
-    align-items: center;
+   
     justify-content: space-around;
+}
+
+.fondo{
+    background-color: #1e20619e;
+    padding: 1%;
 }
 
 
