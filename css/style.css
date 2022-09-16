@@ -29,6 +29,10 @@ nav.nav{
     justify-content: space-between;
 }
 
+body{
+    margin: 0px;
+}
+
 
 footer{
     display: flex;
@@ -40,6 +44,7 @@ footer{
     color: white;
     font-size: 25px;
     width: 100%;
+    height: 5vh;
 
 }
 
@@ -100,8 +105,9 @@ a.img{ /*boton ver mas*/
     padding: 1%;
 }
 
-
-
+ul{
+    padding: 0px;
+}
 
 /* Estilo DETALLE PELICULAS (detail-movie) */
 .bodydetailmovie {
@@ -360,6 +366,7 @@ a.img{ /*boton ver mas*/
     font-size: xx-large;
     padding: 10px;
     background: #6d28a1;
+    color: white;
 
 }
 
@@ -369,12 +376,6 @@ a.img{ /*boton ver mas*/
     justify-content: space-around;
     align-items: center;
     padding: 25px;
-    list-style: none;
-
-}
-
-.liBottom {
-    margin-top: 40px !important;
 }
 
 .genero-terror,
@@ -386,11 +387,11 @@ a.img{ /*boton ver mas*/
     padding-right: 30px;
     font-size: 30px;
     background: rgba(93, 96, 151, 0.824);
-    width: 150px;
     text-align: center;
     margin: 10px 0px;
     padding: 10px;
-    color: beige;
+    color: rgb(240, 240, 232);
+    border-radius: 10%;
 }
 
 .body-generos {
@@ -408,20 +409,26 @@ a.img{ /*boton ver mas*/
 .titulopeliculas,
 .tituloseries {
     text-align: center;
-    background: rgba(93, 96, 151, 0.824);
-
+    background: #1e20619e;
+    color: white;
+    padding: 5px;
 }
 
 .articleseries {
-    padding: 20px;
+    padding: 0px; /*para que no haya espacio en los costados*/
 }
 
 .articlepeliculas {
-    padding: 20px;
+    padding: 0px;
 }
 
 .genero-drama, .genero-fantasia, .genero-accion, .genero-drama{
     color: white;
+    text-align: center;
+}
+
+.main{
+    height: 85vh;
 }
 
 /* Estilo DETALLE DEL GENERO (detail-genres) */
