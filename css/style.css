@@ -396,9 +396,9 @@ a.img{
     margin: 0px;
 }
 
-a {
+.linkgenerosseries {
     text-decoration: none;
-    color: rgb(2, 2, 2);
+    color: white;
 }
 
 .titulopeliculas,
@@ -416,7 +416,7 @@ a {
     padding: 20px;
 }
 
-.genero-drama, .genero-fantasia, .genero-accion, .genero-drama,{
+.genero-drama, .genero-fantasia, .genero-accion, .genero-drama{
     color: white;
 }
 
