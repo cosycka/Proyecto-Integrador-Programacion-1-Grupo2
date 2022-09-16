@@ -113,121 +113,120 @@ ul{
 .bodydetailmovie {
     background-image: url(../img/MammaMiacover\ copy.webp);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-attachment: fixed;
-    height: 100%;
-    color: rgb(0, 0, 0);
-}
-
-.maindetailmovie {
-    background-color: rgb(195, 150, 165);
-    width: 90vw;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    padding: 2%;
-}
-
-.section1detailmovie {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.movieposterdetailmovie {
-    width: 35%;
-    height: initial;
-}
-
-.articlesection1detailmovie {
-    background-color: rgba(255, 255, 255, 0.325);
-    padding: 2%;
-    text-align: center;
-    width: 50vw;
-    border-radius: 5%;
-    border: dotted 5px rgba(195, 150, 165, 0.742);
-}
-
-.titledetailmovie {
-    font-size: 70px;
-    margin: 2%;
-}
-
-.divsection1detailmovie {
-    font-size: 24px;
-}
-
-.psection1detailmovie {
-    margin-top: 0%;
-}
-
-.h4section1detailmovie {
-    margin-bottom: 2%;
-}
-
-.section2detailmovie {
-    background-color: rgba(255, 255, 255, 0.325);
-    padding: 1% 5% 2% 5%;
-    text-align: center;
-    margin: 2%;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 18px;
-}
-
-.section3detailmovie {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
-}
-
-.articlesection3detailmovie {
+        height: 100%;
+        color: rgb(0, 0, 0);
+    }
+    
+    .maindetailmovie {
+        background-color: #37404b;
+        width: 90vw;
+        margin: auto;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 2%;
+    }
+    
+    .section1detailmovie {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .movieposterdetailmovie {
+        width: 35%;
+        height:initial;
+    }
+    
+    .articlesection1detailmovie{
+        background-color: rgba(255, 255, 255, 0.56);
+        padding: 2%;
+        text-align: center;
+        width: 50vw;
+        border-radius: 5%;
+        border: dotted 5px #37404b;
+    }
+    .titledetailmovie{
+        font-size: 70px;
+        margin: 2%;
+    }
+    
+    .divsection1detailmovie{
+        font-size:24px;
+    }
+    
+    .psection1detailmovie{
+        margin-top: 0%;
+    }
+    
+    .h4section1detailmovie{
+        margin-bottom: 2%;
+    }
+    
+    .section2detailmovie{
+        background-color: rgba(255, 255, 255, 0.56);
+        padding: 1% 5% 2% 5%;
+        text-align: center;
+        margin: 2%;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 18px;
+    }
+    
+    .section3detailmovie{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:stretch;
+    }
+    
+    .articlesection3detailmovie{
     width: 20%;
-    background-color: rgba(255, 255, 255, 0.325);
+    background-color: rgba(255, 255, 255, 0.56);
     border-radius: 10%;
     text-align: center;
     padding-top: 4%;
-}
-
-.h4section3detailmovie {
+    }
+    
+    .h4section3detailmovie{
     font-size: larger;
-}
-
-.listsdetailmovie {
-    padding-left: 0%;
-}
-
-.itemlista1detailmovie {
-    list-style-type: none;
-    width: 70%;
-    height: 50px;
-    text-align: center;
-    background-color: rgb(143, 111, 122);
-    border: solid 3px rgb(71, 54, 59);
-    padding: 13px;
-    margin: 5% 15%;
-    border-radius: 20%;
-}
-
-.actoresdetailmovie {
-    list-style-type: none;
-    margin: 5%;
-}
-
-.linknavdetailmovie {
-    text-decoration: none;
-    color: white;
-    font-weight: bolder;
-}
-
-
-.trailerdetailmovie {
-    width: 50%;
-}
-
+    }
+    
+    .listsdetailmovie{
+        padding-left: 0%;
+    }
+    
+    .itemlista1detailmovie{
+        list-style-type: none;
+        width: 70%;
+        height: 50px;
+        text-align: center;
+        background-color: rgb(131, 72, 133);
+        border: solid 2px rgb(95 55 96);
+        padding: 12px;
+        margin: 5% 15%;
+        border-radius: 20%;
+    }
+    
+    .actoresdetailmovie{
+        list-style-type: none;
+        margin: 5%;
+    }
+    
+    .linknavdetailmovie {
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+    }
+    
+    
+    .trailerdetailmovie{
+        width: 50%;
+    }
+    
 
 
 /* Estilo DETALLE SERIES (detail-serie) */
@@ -235,121 +234,121 @@ ul{
 .bodydetailserie {
     background-image: url(../img/B99Cover\ copy.jpeg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-attachment: fixed;
-    height: 100%;
-    color: rgb(0, 0, 0);
-}
-
-.maindetailserie {
-    background-color: rgb(195, 150, 165);
-    width: 90vw;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    padding: 2%;
-}
-
-.section1detailserie {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.serieposterdetailserie {
-    width: 35%;
-    height: initial;
-}
-
-.articlesection1detailserie {
-    background-color: rgba(255, 255, 255, 0.325);
-    padding: 2%;
-    text-align: center;
-    width: 50vw;
-    border-radius: 5%;
-    border: dotted 5px rgba(195, 150, 165, 0.742);
-}
-
-.titledetailserie {
-    font-size: 70px;
-    margin: 2%;
-}
-
-.divsection1detailserie {
-    font-size: 24px;
-}
-
-.psection1detailserie {
-    margin-top: 0%;
-}
-
-.h4section1detailserie {
-    margin-bottom: 2%;
-}
-
-.section2detailserie {
-    background-color: rgba(255, 255, 255, 0.325);
-    padding: 1% 5% 2% 5%;
-    text-align: center;
-    margin: 2%;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 18px;
-}
-
-.section3detailserie {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: stretch;
-}
-
-.articlesection3detailserie {
+        height: 100%;
+        color: rgb(0, 0, 0);
+    }
+    
+    .maindetailserie {
+        background-color: #37404b;
+        width: 90vw;
+        margin: auto;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding: 2%;
+    }
+    
+    .section1detailserie {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .serieposterdetailserie {
+        width: 35%;
+        height:initial;
+    }
+    
+    .articlesection1detailserie{
+        background-color: rgba(255, 255, 255, 0.56);
+        padding: 2%;
+        text-align: center;
+        width: 50vw;
+        border-radius: 5%;
+        border: dotted 5px #37404b;
+    }
+    .titledetailserie{
+        font-size: 70px;
+        margin: 2%;
+    }
+    
+    .divsection1detailserie{
+        font-size:24px;
+    }
+    
+    .psection1detailserie{
+        margin-top: 0%;
+    }
+    
+    .h4section1detailserie{
+        margin-bottom: 2%;
+    }
+    
+    .section2detailserie{
+        background-color: rgba(255, 255, 255, 0.56);
+        padding: 1% 5% 2% 5%;
+        text-align: center;
+        margin: 2%;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 18px;
+    }
+    
+    .section3detailserie{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:stretch;
+    }
+    
+    .articlesection3detailserie{
     width: 20%;
-    background-color: rgba(255, 255, 255, 0.325);
+    background-color: rgba(255, 255, 255, 0.56);
     border-radius: 10%;
     text-align: center;
     padding-top: 4%;
-}
-
-.h4section3detailserie {
+    }
+    
+    .h4section3detailserie{
     font-size: larger;
-}
-
-.listsdetailserie {
-    padding-left: 0%;
-}
-
-.itemlista1detailserie {
-    list-style-type: none;
-    width: 70%;
-    height: 50px;
-    text-align: center;
-    background-color: rgb(143, 111, 122);
-    border: solid 3px rgb(71, 54, 59);
-    padding: 13px;
-    margin: 5% 15%;
-    border-radius: 20%;
-}
-
-.actoresdetailserie {
-    list-style-type: none;
-    margin: 5%;
-}
-
-.linknavdetailserie {
-    text-decoration: none;
-    color: white;
-    font-weight: bolder;
-}
-
-
-.trailerdetailserie {
-    width: 50%;
-}
-
+    }
+    
+    .listsdetailserie{
+        padding-left: 0%;
+    }
+    
+    .itemlista1detailserie{
+        list-style-type: none;
+        width: 70%;
+        height: 50px;
+        text-align: center;
+        background-color: rgb(131, 72, 133);
+        border: solid 2px rgb(95 55 96);
+        padding: 13px;
+        margin: 5% 15%;
+        border-radius: 20%;
+    }
+    
+    .actoresdetailserie{
+        list-style-type: none;
+        margin: 5%;
+    }
+    
+    .linknavdetailserie {
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+    }
+    
+    
+    .trailerdetailserie{
+        width: 50%;
+    }
+    
+    
 
 
 
