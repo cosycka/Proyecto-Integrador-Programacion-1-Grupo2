@@ -16,11 +16,11 @@
 a.nav{
     justify-content: space-around;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     background-color: #1e20619e ;
     padding: 1%;
-    width: 250px;
-    border-radius: 5%;
+    width: 200px;
+    border-radius: 7%;
     margin: 10px;
 }
 
@@ -452,3 +452,7 @@ ul{
 @media(min-width: 500px) {}
 
 /* Estilo RESULTADO DE BUSQUEDA (search-results) */
+
+.listados-ocultado{
+    display: none;
+}
