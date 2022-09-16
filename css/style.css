@@ -91,6 +91,7 @@ li{
 
 a.img{ /*boton ver mas*/
     background-color: rgb(131, 72, 133);
+    border: solid 2px rgb(95 55 96);
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 15px;
@@ -382,12 +383,14 @@ ul{
 .genero-terror,
 .genero-romance,
 .genero-accion,
-.genero-cienciaficcion,
+.genero-musical,
+.genero-comedia,
 .genero-fantasia,
 .genero-drama {
     padding-right: 30px;
     font-size: 30px;
-    background: rgba(93, 96, 151, 0.824);
+    background: rgb(131, 72, 133) ;
+    border: solid 2px rgb(95 55 96);
     text-align: center;
     margin: 10px 0px;
     padding: 10px;
