@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!--Define la version del lenguaje que se esta utilizando-->
+<html lang="en"> <!--Define que todo su contenido interno sera html-->
 
-<head>
-    <meta charset="UTF-8">
+<head> <!--anidamiento de etiquetas, es una etiqueta y adentro tiene otras-->
+    <meta charset="UTF-8"> <!--define que debera soportar cualquier tipo de caracter-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Géneros</title>
-</head>
+    <title>Géneros</title> <!--Lo que se muestra en la pestaña del navegador-->
+</head> 
 
-<body class="body-generos">
+<body class="body-generos"> <!--contiene todas las etiquetas que van a generar contenido visual-->
     <header>
         <section class="header">
             
-                <img src="./img/LOGO.png" width="155" height="90" alt="" class="logo">
+                <img src="./img/LOGO.png" width="155" height="90" alt="" class="logo"> <!--ruta relativa (imagen esta dentro de la carpeta)-->
             
             <nav class="nav">
                         <a href="./index.html" class="nav">Home</a>
@@ -39,9 +39,9 @@
             <article class="articlepeliculas">
                 
 
-                <h1 class="titulogeneros">Géneros</h1>
+                <h1 class="titulogeneros">Géneros</h1> <!--6 tipos de headings y todas se veran en negritas, solo se puede usar una vez-->
                 
-                <h2 class="titulopeliculas">Peliculas</h2>
+                <h2 class="titulopeliculas">Peliculas</h2> <!--Elemento de bloque-->
                 <ul class="lista-generos">
                         
                     <li>
@@ -68,10 +68,10 @@
             <article class="articleseries">
                     <h2 class="tituloseries">Series</h2>
                     
-                    <ul class="lista-generos-series">
+                    <ul class="lista-generos-series"> <!--las listas tienen etiquetas combinadas-->
                         
                         <li class="genero-terror">
-                            <a class="linkgenerosseries" href="detail-genres.html">Terror</a>
+                            <a class="linkgenerosseries" href="detail-genres.html">Terror</a> <!--enlaces locales (dentro de la carpeta)-->
                         </li>
                         <li class="genero-fantasia">
                             <a class="linkgenerosseries" href="detail-genres.html">Fantasia</a>
@@ -95,3 +95,5 @@
 </body>
 
 </html>
+
+<!--Rutas absolutas img src= www.amazon.com, rutas relativas imagenes dentro de la carpeta-->
