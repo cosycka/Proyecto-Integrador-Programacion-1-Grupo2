@@ -500,6 +500,89 @@ ul{
         font-size: 25px;
         width: 100%;
         height: auto;}
-        
     
+    .movieposterdetailmovie {
+        width: 100%;
+        height: initial;}
+
+    .section1detailmovie {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        }
+    
+    .articlesection1detailmovie {
+        background-color: rgba(255, 255, 255, 0.56);
+        padding: 2%;
+        text-align: center;
+        width: 100%;
+        border-radius: 5%;
+        border: dotted 5px #37404b;
+        margin-top: 15px;
+        }
+
+    .section3detailmovie {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+        }
+    
+    .articlesection3detailmovie {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.56);
+        border-radius: 10%;
+        text-align: center;
+        padding-top: 4%;
+        margin-bottom: 15px;
+        }
+    .trailerdetailmovie {
+        width: 100%;
+        }
+
+    .section1detailserie {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        }
+    
+    .serieposterdetailserie {
+        width: 100%;
+        height: initial;
+        margin-bottom: 15px;
+        }
+    
+    .articlesection1detailserie {
+        background-color: rgba(255, 255, 255, 0.56);
+        padding: 2%;
+        text-align: center;
+        width: 100%;
+        border-radius: 5%;
+        border: dotted 5px #37404b;
+        }
+    
+    .section3detailserie {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+        }
+    
+    .articlesection3detailserie {
+        background-color: rgba(255, 255, 255, 0.56);
+        border-radius: 10%;
+        text-align: center;
+        padding-top: 4%;
+        margin-bottom: 15px;
+        height: 300px;
+        }
+
+    .trailerdetailserie {
+        width: 100%;
+        }
+
 }
