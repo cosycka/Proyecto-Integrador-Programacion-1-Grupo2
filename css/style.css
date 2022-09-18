@@ -487,5 +487,18 @@ ul{
         padding: 2%;
         margin-bottom: 15px;
     }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(131, 72, 133);
+        color: white;
+        font-size: 25px;
+        width: 100%;
+        height: auto;}
+        
     
 }
