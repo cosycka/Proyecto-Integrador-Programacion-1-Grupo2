@@ -149,19 +149,18 @@ ul {
     width: 50vw;
     border-radius: 5%;
     border: dotted 5px #37404b;
+    font-size: 24px;
 }
 
 .titledetailmovie {
     font-size: 70px;
     margin: 2%;
-}
-
-.divsection1detailmovie {
-    font-size: 24px;
+    margin-bottom: 60px;
 }
 
 .psection1detailmovie {
     margin-top: 0%;
+    margin-bottom: 65px;
 }
 
 .h4section1detailmovie {
@@ -232,9 +231,10 @@ ul {
     width: 50%;
 }
 
-.divbuttondetailmovie {
+.articlebuttondetailmovie {
     display: flex;
     justify-content: center;
+    margin-top: 28px;
 }
 
 .buttondetailmovie {
@@ -284,19 +284,18 @@ ul {
     width: 50vw;
     border-radius: 5%;
     border: dotted 5px #37404b;
+    font-size: 24px;
 }
 
 .titledetailserie {
     font-size: 70px;
     margin: 2%;
-}
-
-.divsection1detailserie {
-    font-size: 24px;
+    margin-bottom: 60px;
 }
 
 .psection1detailserie {
     margin-top: 0%;
+    margin-bottom: 65px;
 }
 
 .h4section1detailserie {
@@ -367,10 +366,10 @@ ul {
     width: 50%;
 }
 
-.divbuttondetailserie {
+.articlebuttondetailserie {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 28px;
 }
 
 .buttondetailserie {
@@ -552,11 +551,6 @@ ul {
     }
 
 
-    .movieposterdetailmovie {
-        width: 100%;
-        height: initial;
-    }
-
     .section1detailmovie {
         display: flex;
         flex-wrap: wrap;
@@ -564,14 +558,20 @@ ul {
         justify-content: space-between;
     }
 
-    .articlesection1detailmovie {
-        background-color: rgba(255, 255, 255, 0.56);
-        padding: 2%;
-        text-align: center;
+    .movieposterdetailmovie {
         width: 100%;
-        border-radius: 5%;
-        border: dotted 5px #37404b;
+        height: initial;
+    }
+
+    .articlesection1detailmovie {
+        width: 100%;
         margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    .section2detailmovie{
+        margin-top: 15px;
+        margin-bottom: 0px;
     }
 
     .section3detailmovie {
@@ -584,15 +584,16 @@ ul {
 
     .articlesection3detailmovie {
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.56);
-        border-radius: 10%;
-        text-align: center;
-        padding-top: 4%;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
+        margin-top: 15px;
     }
 
     .trailerdetailmovie {
         width: 100%;
+    }
+    
+    .articlebuttondetailmovie{
+        margin-bottom: 20px;
     }
 
     .section1detailserie {
@@ -605,16 +606,17 @@ ul {
     .serieposterdetailserie {
         width: 100%;
         height: initial;
-        margin-bottom: 15px;
     }
 
     .articlesection1detailserie {
-        background-color: rgba(255, 255, 255, 0.56);
-        padding: 2%;
-        text-align: center;
         width: 100%;
-        border-radius: 5%;
-        border: dotted 5px #37404b;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    .section2detailserie{
+        margin-top: 15px;
+        margin-bottom: 0px;
     }
 
     .section3detailserie {
@@ -626,18 +628,19 @@ ul {
     }
 
     .articlesection3detailserie {
-        background-color: rgba(255, 255, 255, 0.56);
-        border-radius: 10%;
-        text-align: center;
-        padding-top: 4%;
-        margin-bottom: 15px;
-        height: 300px;
         width: 100%;
+        margin-bottom: 0px;
+        margin-top: 15px;
     }
 
     .trailerdetailserie {
         width: 100%;
     }
+
+    .articlebuttondetailserie{
+        margin-bottom: 20px;
+    }
+
 
     .peli-genero{
         margin-bottom: 45px;
