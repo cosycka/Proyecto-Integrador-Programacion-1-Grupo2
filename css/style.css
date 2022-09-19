@@ -363,7 +363,7 @@ ul{
     text-align: center; /*define la alineacion del texto*/
     margin-top: 20px;
     text-decoration: none; /*Elige un tipo de decoracion para el texto, subrayado*/
-    font-size: xx-large;
+    font-size: xx-large; /*tamaño de la letra*/
     padding: 10px;
     background: #6d28a1;
     color: white; /*color de la tipografia*/
