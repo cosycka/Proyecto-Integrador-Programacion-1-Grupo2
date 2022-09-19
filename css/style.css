@@ -370,6 +370,7 @@ ul {
 .divbuttondetailserie {
     display: flex;
     justify-content: center;
+    margin-top: 15px;
 }
 
 .buttondetailserie {
@@ -636,6 +637,10 @@ ul {
 
     .trailerdetailserie {
         width: 100%;
+    }
+
+    .peli-genero{
+        margin-bottom: 45px;
     }
 
 }
