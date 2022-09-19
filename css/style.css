@@ -3,7 +3,7 @@
 }
 
 /* Estilo HEADER Y FOOTER */
-.header{
+.header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -13,28 +13,28 @@
     background-size: cover;
 }
 
-a.nav{
+a.nav {
     justify-content: space-around;
     color: white;
     font-size: 25px;
-    background-color: #1e20619e ;
+    background-color: #1e20619e;
     padding: 1%;
     width: 200px;
     border-radius: 7%;
     margin: 10px;
 }
 
-nav.nav{
+nav.nav {
     display: flex;
     justify-content: space-between;
 }
 
-body{
+body {
     margin: 0px;
 }
 
 
-footer{
+footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -50,17 +50,17 @@ footer{
 
 
 /* Estilo HOME (index) */
-a{
+a {
     display: flex;
     text-decoration: none;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
 }
 
-.listados{
+.listados {
     color: white;
     text-align: center;
     background-color: #1e20619e;
@@ -69,27 +69,28 @@ nav{
 
 }
 
-.caja{
+.caja {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 30px;
 }
 
-li{
+li {
     list-style-type: none;
 }
 
-.textoindex{
+.textoindex {
     color: white;
     text-align: center;
 }
 
-.cuerpo{
+.cuerpo {
     background-color: #37404b;
 }
 
-a.img{ /*boton ver mas*/
+a.img {
+    /*boton ver mas*/
     background-color: rgb(131, 72, 133);
     border: solid 2px rgb(95 55 96);
     padding-top: 5px;
@@ -97,16 +98,16 @@ a.img{ /*boton ver mas*/
     padding-right: 15px;
     padding-left: 15px;
     color: white;
-   
+
     justify-content: space-around;
 }
 
-.fondo{
+.fondo {
     background-color: #1e20619e;
     padding: 1%;
 }
 
-ul{
+ul {
     padding: 0px;
 }
 
@@ -114,122 +115,134 @@ ul{
 .bodydetailmovie {
     background-image: url(../img/MammaMiacover\ copy.webp);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-attachment: fixed;
-        height: 100%;
-        color: rgb(0, 0, 0);
-    }
-    
-    .maindetailmovie {
-        background-color: #37404b;
-        width: 90vw;
-        margin: auto;
-        margin-top: 2%;
-        margin-bottom: 2%;
-        padding: 2%;
-    }
-    
-    .section1detailmovie {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    .movieposterdetailmovie {
-        width: 35%;
-        height:initial;
-    }
-    
-    .articlesection1detailmovie{
-        background-color: rgba(255, 255, 255, 0.56);
-        padding: 2%;
-        text-align: center;
-        width: 50vw;
-        border-radius: 5%;
-        border: dotted 5px #37404b;
-    }
-    .titledetailmovie{
-        font-size: 70px;
-        margin: 2%;
-    }
-    
-    .divsection1detailmovie{
-        font-size:24px;
-    }
-    
-    .psection1detailmovie{
-        margin-top: 0%;
-    }
-    
-    .h4section1detailmovie{
-        margin-bottom: 2%;
-    }
-    
-    .section2detailmovie{
-        background-color: rgba(255, 255, 255, 0.56);
-        padding: 1% 5% 2% 5%;
-        text-align: center;
-        margin: 2%;
-        margin-left: 0;
-        margin-right: 0;
-        font-size: 18px;
-    }
-    
-    .section3detailmovie{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items:stretch;
-    }
-    
-    .articlesection3detailmovie{
+    height: 100%;
+    color: rgb(0, 0, 0);
+}
+
+.maindetailmovie {
+    background-color: #37404b;
+    width: 90vw;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+
+.section1detailmovie {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.movieposterdetailmovie {
+    width: 35%;
+    height: initial;
+}
+
+.articlesection1detailmovie {
+    background-color: rgba(255, 255, 255, 0.56);
+    padding: 2%;
+    text-align: center;
+    width: 50vw;
+    border-radius: 5%;
+    border: dotted 5px #37404b;
+}
+
+.titledetailmovie {
+    font-size: 70px;
+    margin: 2%;
+}
+
+.divsection1detailmovie {
+    font-size: 24px;
+}
+
+.psection1detailmovie {
+    margin-top: 0%;
+}
+
+.h4section1detailmovie {
+    margin-bottom: 2%;
+}
+
+.section2detailmovie {
+    background-color: rgba(255, 255, 255, 0.56);
+    padding: 1% 5% 2% 5%;
+    text-align: center;
+    margin: 2%;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 18px;
+}
+
+.section3detailmovie {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.articlesection3detailmovie {
     width: 20%;
     background-color: rgba(255, 255, 255, 0.56);
     border-radius: 10%;
     text-align: center;
     padding-top: 4%;
-    }
-    
-    .h4section3detailmovie{
+}
+
+.h4section3detailmovie {
     font-size: larger;
-    }
-    
-    .listsdetailmovie{
-        padding-left: 0%;
-    }
-    
-    .itemlista1detailmovie{
-        list-style-type: none;
-        width: 70%;
-        height: 50px;
-        text-align: center;
-        background-color: rgb(131, 72, 133);
-        border: solid 2px rgb(95 55 96);
-        padding: 12px;
-        margin: 5% 15%;
-        border-radius: 20%;
-    }
-    
-    .actoresdetailmovie{
-        list-style-type: none;
-        margin: 5%;
-    }
-    
-    .linknavdetailmovie {
-        text-decoration: none;
-        color: white;
-        font-weight: bolder;
-        display: flex;
-        justify-content: center;
-    }
-    
-    
-    .trailerdetailmovie{
-        width: 50%;
-    }
-    
+}
+
+.listsdetailmovie {
+    padding-left: 0%;
+}
+
+.itemlista1detailmovie {
+    list-style-type: none;
+    width: 70%;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(131, 72, 133);
+    border: solid 2px rgb(95 55 96);
+    padding: 12px;
+    margin: 5% 15%;
+    border-radius: 20%;
+}
+
+.actoresdetailmovie {
+    list-style-type: none;
+    margin: 5%;
+}
+
+.linknavdetailmovie {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+
+
+.trailerdetailmovie {
+    width: 50%;
+}
+
+.divbuttondetailmovie {
+    display: flex;
+    justify-content: center;
+}
+
+.buttondetailmovie {
+    background-color: rgb(131, 72, 133);
+    border: solid 2px rgba(255, 255, 255, 0.56);
+    color: white;
+    padding: 12px 24px;
+}
 
 
 /* Estilo DETALLE SERIES (detail-serie) */
@@ -237,123 +250,134 @@ ul{
 .bodydetailserie {
     background-image: url(../img/B99Cover\ copy.jpeg);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-attachment: fixed;
-        height: 100%;
-        color: rgb(0, 0, 0);
-    }
-    
-    .maindetailserie {
-        background-color: #37404b;
-        width: 90vw;
-        margin: auto;
-        margin-top: 2%;
-        margin-bottom: 2%;
-        padding: 2%;
-    }
-    
-    .section1detailserie {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    .serieposterdetailserie {
-        width: 35%;
-        height:initial;
-    }
-    
-    .articlesection1detailserie{
-        background-color: rgba(255, 255, 255, 0.56);
-        padding: 2%;
-        text-align: center;
-        width: 50vw;
-        border-radius: 5%;
-        border: dotted 5px #37404b;
-    }
-    .titledetailserie{
-        font-size: 70px;
-        margin: 2%;
-    }
-    
-    .divsection1detailserie{
-        font-size:24px;
-    }
-    
-    .psection1detailserie{
-        margin-top: 0%;
-    }
-    
-    .h4section1detailserie{
-        margin-bottom: 2%;
-    }
-    
-    .section2detailserie{
-        background-color: rgba(255, 255, 255, 0.56);
-        padding: 1% 5% 2% 5%;
-        text-align: center;
-        margin: 2%;
-        margin-left: 0;
-        margin-right: 0;
-        font-size: 18px;
-    }
-    
-    .section3detailserie{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items:stretch;
-    }
-    
-    .articlesection3detailserie{
+    height: 100%;
+    color: rgb(0, 0, 0);
+}
+
+.maindetailserie {
+    background-color: #37404b;
+    width: 90vw;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+
+.section1detailserie {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.serieposterdetailserie {
+    width: 35%;
+    height: initial;
+}
+
+.articlesection1detailserie {
+    background-color: rgba(255, 255, 255, 0.56);
+    padding: 2%;
+    text-align: center;
+    width: 50vw;
+    border-radius: 5%;
+    border: dotted 5px #37404b;
+}
+
+.titledetailserie {
+    font-size: 70px;
+    margin: 2%;
+}
+
+.divsection1detailserie {
+    font-size: 24px;
+}
+
+.psection1detailserie {
+    margin-top: 0%;
+}
+
+.h4section1detailserie {
+    margin-bottom: 2%;
+}
+
+.section2detailserie {
+    background-color: rgba(255, 255, 255, 0.56);
+    padding: 1% 5% 2% 5%;
+    text-align: center;
+    margin: 2%;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 18px;
+}
+
+.section3detailserie {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.articlesection3detailserie {
     width: 20%;
     background-color: rgba(255, 255, 255, 0.56);
     border-radius: 10%;
     text-align: center;
     padding-top: 4%;
-    }
-    
-    .h4section3detailserie{
+}
+
+.h4section3detailserie {
     font-size: larger;
-    }
-    
-    .listsdetailserie{
-        padding-left: 0%;
-    }
-    
-    .itemlista1detailserie{
-        list-style-type: none;
-        width: 70%;
-        height: 50px;
-        text-align: center;
-        background-color: rgb(131, 72, 133);
-        border: solid 2px rgb(95 55 96);
-        padding: 13px;
-        margin: 5% 15%;
-        border-radius: 20%;
-    }
-    
-    .actoresdetailserie{
-        list-style-type: none;
-        margin: 5%;
-    }
-    
-    .linknavdetailserie {
-        text-decoration: none;
-        color: white;
-        font-weight: bolder;
-        display: flex;
-        justify-content: center;
-    }
-    
-    
-    .trailerdetailserie{
-        width: 50%;
-    }
-    
-    
+}
+
+.listsdetailserie {
+    padding-left: 0%;
+}
+
+.itemlista1detailserie {
+    list-style-type: none;
+    width: 70%;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(131, 72, 133);
+    border: solid 2px rgb(95 55 96);
+    padding: 13px;
+    margin: 5% 15%;
+    border-radius: 20%;
+}
+
+.actoresdetailserie {
+    list-style-type: none;
+    margin: 5%;
+}
+
+.linknavdetailserie {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+
+
+.trailerdetailserie {
+    width: 50%;
+}
+
+.divbuttondetailserie {
+    display: flex;
+    justify-content: center;
+}
+
+.buttondetailserie {
+    background-color: rgb(131, 72, 133);
+    border: solid 2px rgba(255, 255, 255, 0.56);
+    color: white;
+    padding: 12px 24px;
+}
 
 
 
@@ -363,24 +387,33 @@ ul{
 
 
 /* Estilo GENEROS (genres) */
-.titulogeneros {  /*selector*/
-    text-align: center; /*define la alineacion del texto*/
+.titulogeneros {
+    /*selector*/
+    text-align: center;
+    /*define la alineacion del texto*/
     margin-top: 20px;
-    text-decoration: none; /*Elige un tipo de decoracion para el texto, subrayado*/
-    font-size: xx-large; /*tamaño de la letra*/
+    text-decoration: none;
+    /*Elige un tipo de decoracion para el texto, subrayado*/
+    font-size: xx-large;
+    /*tamaño de la letra*/
     padding: 10px;
     background: #6d28a1;
-    color: white; /*color de la tipografia*/
+    color: white;
+    /*color de la tipografia*/
 }
 
 .lista-generos,
 .lista-generos-series {
-    display: flex; /*Definir al contenedor padre como contenedor flexible*/
-    justify-content: space-around; /*alineamos el contenido en el main axis*/
-    align-items: center; /*alineamos el contenido en el cross axis*/
-    flex-direction: column; /*se pueden crear filas y columnas*/
+    display: flex;
+    /*Definir al contenedor padre como contenedor flexible*/
+    justify-content: space-around;
+    /*alineamos el contenido en el main axis*/
+    align-items: center;
+    /*alineamos el contenido en el cross axis*/
+    flex-direction: column;
+    /*se pueden crear filas y columnas*/
     padding: 25px;
-    
+
 
 }
 
@@ -393,10 +426,11 @@ ul{
 .genero-drama {
     padding-right: 30px;
     font-size: 30px;
-    background: rgb(131, 72, 133) ;
+    background: rgb(131, 72, 133);
     border: solid 2px rgb(95 55 96);
     text-align: center;
-    margin: 10px 0px; /*sirve para separar una caja de la otra*/
+    margin: 10px 0px;
+    /*sirve para separar una caja de la otra*/
     padding: 10px;
     color: rgb(240, 240, 232);
     border-radius: 10%;
@@ -404,8 +438,10 @@ ul{
 
 .body-generos {
     background: #37404b;
-    background-repeat: no-repeat; /*controla la repeticion de imagen*/
-    background-size: cover; /*tamaño de la imagen de fondo*/
+    background-repeat: no-repeat;
+    /*controla la repeticion de imagen*/
+    background-size: cover;
+    /*tamaño de la imagen de fondo*/
     margin: 0px;
 }
 
@@ -423,14 +459,18 @@ ul{
 }
 
 .articleseries {
-    padding: 0px; /*para que no haya espacio en los costados*/
+    padding: 0px;
+    /*para que no haya espacio en los costados*/
 }
 
 .articlepeliculas {
     padding: 0px;
 }
 
-.genero-drama, .genero-fantasia, .genero-accion, .genero-drama{
+.genero-drama,
+.genero-fantasia,
+.genero-accion,
+.genero-drama {
     color: white;
     text-align: center;
 }
@@ -455,23 +495,26 @@ ul{
 
 /* Estilo RESULTADO DE BUSQUEDA (search-results) */
 
-.listados-ocultado{
-    display: none;  /*oculta un elemento en la vista, no lo elimina de la estructura del HTML. Es un efecto visual.*/
+.listados-ocultado {
+    display: none;
+    /*oculta un elemento en la vista, no lo elimina de la estructura del HTML. Es un efecto visual.*/
 }
 
 /* RESPONSIVE*/
-@media(max-width: 420px){
+@media(max-width: 420px) {
+
     /*header*/
-    .header{
+    .header {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column; 
-        justify-content: space-around; 
-        align-items: center; 
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
         padding: 10px 0;
         background-color: #6d28a1;
-        background-size: cover; 
+        background-size: cover;
     }
+
     nav.nav {
         display: flex;
         flex-direction: column;
@@ -504,20 +547,22 @@ ul{
         font-size: 25px;
         width: 100%;
         height: auto;
-        text-align: center;}
-        
-    
+        text-align: center;
+    }
+
+
     .movieposterdetailmovie {
         width: 100%;
-        height: initial;}
+        height: initial;
+    }
 
     .section1detailmovie {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: space-between;
-        }
-    
+    }
+
     .articlesection1detailmovie {
         background-color: rgba(255, 255, 255, 0.56);
         padding: 2%;
@@ -526,7 +571,7 @@ ul{
         border-radius: 5%;
         border: dotted 5px #37404b;
         margin-top: 15px;
-        }
+    }
 
     .section3detailmovie {
         display: flex;
@@ -534,8 +579,8 @@ ul{
         flex-direction: column;
         justify-content: space-around;
         align-items: stretch;
-        }
-    
+    }
+
     .articlesection3detailmovie {
         width: 100%;
         background-color: rgba(255, 255, 255, 0.56);
@@ -543,24 +588,25 @@ ul{
         text-align: center;
         padding-top: 4%;
         margin-bottom: 15px;
-        }
+    }
+
     .trailerdetailmovie {
         width: 100%;
-        }
+    }
 
     .section1detailserie {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: space-between;
-        }
-    
+    }
+
     .serieposterdetailserie {
         width: 100%;
         height: initial;
         margin-bottom: 15px;
-        }
-    
+    }
+
     .articlesection1detailserie {
         background-color: rgba(255, 255, 255, 0.56);
         padding: 2%;
@@ -568,16 +614,16 @@ ul{
         width: 100%;
         border-radius: 5%;
         border: dotted 5px #37404b;
-        }
-    
+    }
+
     .section3detailserie {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: space-around;
         align-items: stretch;
-        }
-    
+    }
+
     .articlesection3detailserie {
         background-color: rgba(255, 255, 255, 0.56);
         border-radius: 10%;
@@ -586,10 +632,10 @@ ul{
         margin-bottom: 15px;
         height: 300px;
         width: 100%;
-        }
+    }
 
     .trailerdetailserie {
         width: 100%;
-        }
+    }
 
 }
