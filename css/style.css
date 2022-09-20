@@ -268,13 +268,10 @@ ul {
     /*define la alineacion del texto*/
     margin-top: 20px;
     text-decoration: none;
-    /*Elige un tipo de decoracion para el texto, subrayado*/
     font-size: xx-large;
-    /*tamaño de la letra*/
     padding: 10px;
     background: #6d28a1;
     color: white;
-    /*color de la tipografia*/
 }
 
 .lista-generos,
@@ -282,11 +279,10 @@ ul {
     display: flex;
     /*Definir al contenedor padre como contenedor flexible*/
     justify-content: space-around;
-    /*alineamos el contenido en el main axis*/
+    /*main axis*/
     align-items: center;
-    /*alineamos el contenido en el cross axis*/
+   /*cross axis*/
     flex-direction: column;
-    /*se pueden crear filas y columnas*/
     padding: 25px;
 
 
@@ -305,7 +301,6 @@ ul {
     border: solid 2px rgb(95 55 96);
     text-align: center;
     margin: 10px 0px;
-    /*sirve para separar una caja de la otra*/
     padding: 10px;
     color: rgb(240, 240, 232);
     border-radius: 10%;
@@ -314,9 +309,7 @@ ul {
 .body-generos {
     background: #37404b;
     background-repeat: no-repeat;
-    /*controla la repeticion de imagen*/
     background-size: cover;
-    /*tamaño de la imagen de fondo*/
     margin: 0px;
 }
 
