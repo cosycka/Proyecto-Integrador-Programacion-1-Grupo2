@@ -70,9 +70,10 @@ nav {
 }
 
 .caja {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: flex; /* defini al contenedor padre como un un contenedor flexible.*/
+    flex-wrap: wrap; /*container respete los anchos de sus hijos.*/
+    flex-direction: row; /*crear filas*/
+    justify-content: space-evenly; /*alinear contenido sobre el main axis*/
     margin-bottom: 30px;
 }
 
