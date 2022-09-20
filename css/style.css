@@ -370,7 +370,7 @@ ul {
 }
 
 /* RESPONSIVE*/
-@media(max-width: 1050px) {
+@media(max-width: 420px) {
 
     /*header*/
     header {
