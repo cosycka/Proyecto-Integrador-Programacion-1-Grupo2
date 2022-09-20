@@ -3,7 +3,7 @@
 }
 
 /* Estilo HEADER Y FOOTER */
-.header {
+header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -379,48 +379,30 @@ ul {
 @media(max-width: 420px) {
 
     /*header*/
-    .header {
-        display: flex;
-        flex-wrap: wrap;
+    header {
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
         padding: 10px 0;
-        background-color: #6d28a1;
-        background-size: cover;
+
     }
 
     nav.nav {
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 
     .caja {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 10px;
-        margin-bottom: 30px;
     }
 
     .fondo {
-        background-color: #1e20619e;
         padding: 2%;
         margin-bottom: 15px;
     }
 
     footer {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        background-color: rgb(131, 72, 133);
-        color: white;
-        font-size: 25px;
-        width: 100%;
+        
         height: auto;
         text-align: center;
     }
@@ -470,8 +452,6 @@ ul {
     .articlebuttondetailmovie{
         margin-bottom: 20px;
     }
-
-
 
     .peli-genero{
         margin-bottom: 45px;
