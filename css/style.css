@@ -11,6 +11,7 @@ header {
     align-items: center;
     background-color: #6d28a1;
     background-size: cover;
+    padding: 10px;
 }
 
 .logo{
