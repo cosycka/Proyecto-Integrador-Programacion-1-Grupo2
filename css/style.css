@@ -13,6 +13,11 @@ header {
     background-size: cover;
 }
 
+.logo{
+    width: 155px;
+    height: 90px;
+}
+
 a.nav {
     justify-content: space-around;
     color: white;
@@ -29,6 +34,8 @@ nav.nav {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+
 
 body {
     margin: 0px;
