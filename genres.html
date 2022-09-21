@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<!--Define la version del lenguaje que se esta utilizando-->
 <html lang="en">
-<!--Define que todo su contenido interno sera html-->
 
 <head>
-    <!--anidamiento de etiquetas, es una etiqueta y adentro tiene otras-->
     <meta charset="UTF-8">
-    <!--define que debera soportar cualquier tipo de caracter-->
+    <!--caracteres-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
@@ -15,14 +12,13 @@
 </head>
 
 <body class="body-generos">
-    <!--contiene todas las etiquetas que van a generar contenido visual-->
+    
     <header>
         <img src="./img/LOGO.png" width="155" height="90" alt="imagen del logo" class="logo">
-        <!--ruta relativa (imagen esta dentro de la carpeta)-->
+        
 
         <nav class="nav">
             <a href="./index.html" class="nav">Home</a>
-            <!--enlace local-->
             <a href="./peliculas.html" class="nav">Peliculas</a>
             <a href="./series.html" class="nav">Series</a>
             <a href="./favorite.html" class="nav">Favoritos</a>
@@ -30,9 +26,7 @@
         </nav>
 
         <form action="./search-results.html" method="get">
-            <!--es la que permite funcionar al formulario, action indica donde redireccionará al formulario luego del envío, method indica el método de http que se utilizará el formulario para enviar la información.-->
             <input type="search" name="busquedacodigo" size="9" maxlength="9">
-            <!--genera campos para que el usuario complete con información, name identifica el campo, es fundamental para procesar la información del mismo-->
             <button type="submit">Buscar </button>
         </form>
     </header>
@@ -47,23 +41,23 @@
 
 
                 <h1 class="titulogeneros">Géneros</h1>
-                <!--6 tipos de headings y todas se vaeran en negritas, solo se puede usar una vez-->
+                <!--6, negritas, una vez, eb-->
 
                 <h2 class="titulopeliculas">Peliculas</h2>
                 
-                <ul class="lista-generos">
+                <ul class="lista-generos"> <!--anidadas-->
 
                     <li>
-                        <a class="genero-terror" href="detail-genres.html">Terror</a>
+                        <a class="genero-terror" href="detail-genres.html">Terror</a> <!--e.l-->
                     </li>
                     <li>
-                        <a class="genero-romance" href="detail-genres.html">Romance</a>
+                        <a class="genero-romance" href="detail-genres.html">Romance</a> <!--bullet, etc-->
                     </li>
                     <li>
                         <a class="genero-musical" href="detail-genres.html">Musical</a>
                     </li>
                     <li>
-                        <a class="genero-comedia" href="detail-genres.html">Comedia</a>
+                        <a class="genero-comedia" href="detail-genres.html">Comedia</a> <!--hay abs y rel-->
                     </li>
                     <li>
                         <a class="genero-accion" href="detail-genres.html">Acción</a>

@@ -296,16 +296,16 @@ ul {
 .genero-musical,
 .genero-comedia,
 .genero-fantasia,
-.genero-drama {
+.genero-drama {  /*#ID*/
     padding-right: 30px;
     font-size: 30px;
     background: rgb(131, 72, 133);
-    border: solid 2px rgb(95 55 96);
+    border: solid rgb(95 55 96);
     text-align: center;
     margin: 10px 0px;
     padding: 10px;
     color: rgb(240, 240, 232);
-    border-radius: 10%;
+    border-radius: 10%; /*las puntas redondas*/
 }
 
 .body-generos {
@@ -373,7 +373,7 @@ ul {
 /* RESPONSIVE*/
 @media(max-width: 420px) {
 
-    /*header*/
+    
     header {
         flex-direction: column;
         padding: 10px 0;
