@@ -371,6 +371,73 @@ ul {
 }
 
 /* RESPONSIVE*/
+
+@media (max-width: 768px){
+
+    header {
+        flex-direction: column;
+        padding: 10px 0;
+
+    }
+
+    .fondo{
+        margin: 10px;
+    }
+
+    .peli-genero{
+        margin: 15px;
+    }
+
+    .section1detailmovie {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .movieposterdetailmovie {
+        width: 100%;
+        height: initial;
+    }
+
+    .articlesection1detailmovie {
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    .section2detailmovie{
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    .section3detailmovie {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+    .articlesection3detailmovie {
+        width: 100%;
+        margin-bottom: 0px;
+        margin-top: 15px;
+    }
+
+    .trailerdetailmovie {
+        width: 100%;
+    }
+
+    footer {
+        
+        height: auto;
+        text-align: center;
+    }
+
+}
+
 @media(max-width: 420px) {
 
     
