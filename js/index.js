@@ -32,7 +32,7 @@ fetch(peliculasPopulares)
         //Ademas usaremos las template strings para poder utilizar los datos 
         contenido  += 
         `<article class="fondo">
-            <img src="./img/MammaMiacover copy.webp" width="200" height="250" alt="${peliculas[i].title}">
+            <img src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path} " width="200" height="250" alt="${peliculas[i].title}">
             <p class="textoindex"> <b> ${peliculas[i].title}</b> <br>
             Fecha de estreno: ${peliculas[i].release_date} </p>
             <a href="./detail-movie.html" class="img">Ver Mas</a>
@@ -61,7 +61,7 @@ fetch(seriesPopulares)
     for (let i = 0; i < 5; i++) {
         contenido  += 
         `<article class="fondo">
-            <img src="./img/B99Cover copy.jpeg" width="200" height="250" alt="imagen b99">
+            <img src="https://image.tmdb.org/t/p/w500/${series[i].poster_path}" width="200" height="250" alt="imagen b99">
             <p class="textoindex"> <b>${series[i].name}</b> <br>
             Fecha de estreno: ${series[i].first_air_date}</p>
             <a href="./detail-serie.html" class="img">Ver Mas</a>
@@ -87,7 +87,7 @@ fetch(mejorCalificadas)
     for (let i = 0; i < 5; i++) {
         contenido  += 
         `<article class="fondo">
-            <img src="./img/B99Cover copy.jpeg" width="200" height="250" alt="imagen b99">
+            <img src="https://image.tmdb.org/t/p/w500/${mejorCalificadas[i].poster_path}" width="200" height="250" alt="imagen b99">
             <p class="textoindex"> <b>${mejorCalificadas[i].name}</b> <br>
             Fecha de estreno: ${mejorCalificadas[i].first_air_date}</p>
             <a href="./detail-serie.html" class="img">Ver Mas</a>
