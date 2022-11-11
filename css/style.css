@@ -19,6 +19,11 @@ header {
     height: 90px;
 }
 
+.logo1{
+    width: 180px;
+    height: 130px;
+}
+
 a.nav {
     justify-content: space-around;
     color: white;
@@ -53,7 +58,7 @@ footer {
     color: white;
     font-size: 25px;
     width: 100%;
-    height: 5vh;
+    height: 160 px;
 
 }
 
