@@ -36,8 +36,7 @@ fetch(peliculasPopulares)
             <p class="textoindex"> <b> ${peliculas[i].title}</b> <br>
             Fecha de estreno: ${peliculas[i].release_date} </p>
             <a href="./detail-movie.html" class="img">Ver Mas</a>
-        </article>
-        `
+        </article>`
     
     }
     cajaPeliculas.innerHTML=contenido
@@ -76,6 +75,7 @@ fetch(seriesPopulares)
     return error;
 })
 
+//SECCION SERIES MEJOR CALIFICADAS
 fetch(mejorCalificadas)
 .then(function(response) {
     return response.json();

@@ -30,7 +30,7 @@ window.addEventListener('load', function () {
     serRes.innerText =`Resultados de búsqueda para: ${captura}`
 
     api_key= '3d4602582547bc4afa8f74ef23bb1e57'
-    let searchPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&page=1&include_adult=false`
+    let searchPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=3d4602582547bc4afa8f74ef23bb1e57&query=${captura}&page=1`
 
     // traemos las peliculas
    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${captura}`)
@@ -39,6 +39,7 @@ window.addEventListener('load', function () {
   })
   .then(function(data) {
       console.log(data);
+      let peliculas= data.results
       if (data.data.length == 0) {
         pelicula.style.display = 'none'
       }
@@ -46,12 +47,11 @@ window.addEventListener('load', function () {
         for (let i = 0; i < data.data.length; i++) {
           pelicula1.innerHTML += 
           `<article class="fondo">
-            <img src="./img/MammaMiacover copy.webp" width="200" height="250" alt="${peliculas[i].title}">
+            <img src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path} " width="200" height="250" alt="${peliculas[i].title}">
             <p class="textoindex"> <b> ${peliculas[i].title}</b> <br>
             Fecha de estreno: ${peliculas[i].release_date} </p>
             <a href="./detail-movie.html" class="img">Ver Mas</a>
-        </article>
-      ` 
+          </article>` 
       }
       }
       
