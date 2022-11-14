@@ -12,7 +12,6 @@ let ser  = document.querySelector('.search')
 let esconder = document.querySelector('.invisible')
 let animacionDeCarga = document.querySelector('.animacionDeCarga')
 let noData = document.querySelector('.noData')
-let hacheDos = document.querySelectorAll('.escondite')
 let pelicula1 = document.querySelector('.peli1')
 let serie1 = document.querySelector('.ser1')
 
@@ -33,7 +32,7 @@ window.addEventListener('load', function () {
     let searchPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=3d4602582547bc4afa8f74ef23bb1e57&query=${captura}&page=1`
 
     // traemos las peliculas
-   fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${captura}`)
+  fetch(searchPeliculas)
   .then(function(response) {
     return response.json()
   })
