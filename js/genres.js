@@ -1,16 +1,19 @@
 api_key= '3d4602582547bc4afa8f74ef23bb1e57'
 let generosPeliculas = `https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}&language=en-US`
-let generosSeries =`https://api.themoviedb.org/3/genre/tv/list?api_key=${api_key}&language=en-US`
+let generosSeries =`https://api.themoviedb.org/3/genre/tv/list?api_key=${api_key}&language=en-US` //JSON es un formato de texto que entiende java script, te convierte de un json a un dato manipulable en javascript
 
-let listaPelicula = document.querySelector(".generoPelis")
+let listaPelicula = document.querySelector(".generoPelis") 
 let listaSerie = document.querySelector(".generoSeries")
 
 //GENERO PELICULA
-fetch(generosPeliculas)
+fetch(generosPeliculas) //retornaba una promesa
+//utiliza la url de la api
 .then(function(response){
-	return response.json();
+    //captura el fetch y lo procesa
+	return response.json(); //json: cada objeto que tira la api lo convierte en el tipo de dato que es
 })
 .then(function(data){
+    // recibe la funcion anterior y la procesa, aca es donde voy a editar el html
 	console.log(data);
     generos = data.genres;
     let contenido = ""
@@ -20,7 +23,8 @@ fetch(generosPeliculas)
             <a class="linkgenerosseries" href="detail-genres.html">${generos[i].name}</a>
         </li>`
     } 
-    listaPelicula.innerHTML=contenido
+    listaPelicula.innerHTML=contenido //para que se edite todo el html
+    return data;
 })
 .catch(function(error){
 	console.log('El error es: ' + error);

@@ -4,13 +4,8 @@ let detalleSeries = `https://api.themoviedb.org/3/discover/tv?api_key=3d46025825
 
 
 
+
 fetch(detallePeliculas)
-.then(function(response) {
-    return response.json()
-})
-.then(function(data){
-    console.log(data.results);
-fetch(detalleSeries)
 .then(function(response) {
     return response.json()
 })
@@ -28,5 +23,4 @@ fetch(detalleSeries)
             <a href="./detail-movie.html" class="img">Ver Mas</a>
         </article>`
     }
-})
 })
