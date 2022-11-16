@@ -9,10 +9,12 @@ let detallePelicula = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=
 
 
 // capturando elementos del dom
-let imagen = document.querySelector('.movieposterdetailmovie')
-let article1 = document.querySelector('.articlesection1detailmovie')
-let sinopsis = document.querySelector('.section2detailmovie')
-let generos = document.querySelector('.section3detailmovie')
+let titulo = document.querySelector('.titledetailmovie')
+let estreno = document.querySelector('.estreno')
+let duracion= document.querySelector('.duracion')
+let poster = document.querySelector('.movieposterdetailmovie')
+let sinopsis = document.querySelector('.sinopsis')
+//let generos = document.querySelector('.')
 
 
 fetch(detallePelicula)
@@ -21,28 +23,14 @@ fetch(detallePelicula)
 })
 .then(function (data) {
     console.log(data);
-    let pelicula = data
-    imagen.src=`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`;
-    let contenido = 
-    `<article class="articlesection1detailmovie">
-        <h1 class="titledetailmovie">${pelicula.original_title}</h1>
-        <h4 class="h4section1detailmovie">Calificación</h4>
-        <p class="psection1detailmovie"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
-                class="fa-regular fa-star"></i> (6.7/10)</p>
-        <h4 class="h4section1detailmovie"> Fecha de estreno </h4>
-        <p class="psection1detailmovie">${pelicula.release_date}</p>
-        <h4 class="h4section1detailmovie">Duración </h4>
-        <p class="psection1detailmovie">${pelicula.runtime}</p>
-    </article>`
-    article1.innerHTML= contenido;
+    
+    titulo.innerHTML= data.original_title;
+    estreno.innerHTML= data.release_date;
+    duracion.innerHTML= data.runtime; //como agregar minutos
+    poster.src=`https://image.tmdb.org/t/p/w500${data.poster_path}`;
+    sinopsis.innerHTML= data.overview;
 
-    let contenido1= 
-    `<section class="section2detailmovie">
-        <h2>Sinópsis:</h2>
-        <p>${pelicula.overview}</p>
-    </section>`
-    sinopsis.innerHTML= contenido1
+    //generos
 
     return data
     
