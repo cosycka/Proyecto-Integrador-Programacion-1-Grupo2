@@ -25,6 +25,7 @@ window.addEventListener('load', function () {
       }
   }, 2000);
   })
+  
   noData.style.display = 'none'
     serRes.innerText =`Resultados de búsqueda para: ${captura}`
 

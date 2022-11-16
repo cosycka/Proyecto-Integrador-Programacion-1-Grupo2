@@ -14,7 +14,7 @@ fetch(detallePeliculas)
 
     let contenido=''
 
-    for (let i =0; i<data2.data.length; i++) {
+    for (let i =0; i<data2.results.length; i++) {
         
         contenido += 
         `<article class="peli-genero">

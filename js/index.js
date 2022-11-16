@@ -35,7 +35,7 @@ fetch(peliculasPopulares)
             <img src="https://image.tmdb.org/t/p/w500/${peliculas[i].poster_path} " width="200" height="250" alt="${peliculas[i].title}">
             <p class="textoindex"> <b> ${peliculas[i].title}</b> <br>
             Fecha de estreno: ${peliculas[i].release_date} </p>
-            <a href="./detail-movie.html" class="img">Ver Mas</a>
+            <a href="./detail-movie.html?id=${peliculas[i].id}" class="img">Ver Mas</a>
         </article>`
     
     }
@@ -63,7 +63,7 @@ fetch(seriesPopulares)
             <img src="https://image.tmdb.org/t/p/w500/${series[i].poster_path}" width="200" height="250" alt="imagen b99">
             <p class="textoindex"> <b>${series[i].name}</b> <br>
             Fecha de estreno: ${series[i].first_air_date}</p>
-            <a href="./detail-serie.html" class="img">Ver Mas</a>
+            <a href="./detail-serie.html?id=${series[i].id}" class="img">Ver Mas</a>
         </article>`
     
     }
@@ -90,7 +90,7 @@ fetch(mejorCalificadas)
             <img src="https://image.tmdb.org/t/p/w500/${mejorCalificadas[i].poster_path}" width="200" height="250" alt="imagen b99">
             <p class="textoindex"> <b>${mejorCalificadas[i].name}</b> <br>
             Fecha de estreno: ${mejorCalificadas[i].first_air_date}</p>
-            <a href="./detail-serie.html" class="img">Ver Mas</a>
+            <a href="./detail-serie.html?id=${mejorCalificadas[i].id}" class="img">Ver Mas</a>
         </article>`
     
     }

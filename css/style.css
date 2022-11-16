@@ -383,6 +383,10 @@ ul {
     display: none;
     /*oculta un elemento en la vista, no lo elimina de la estructura del HTML. Es un efecto visual.*/
 }
+.animacionDeCarga {
+    display: flex;
+    justify-content: center;
+}
 
 /* RESPONSIVE*/
 
