@@ -128,7 +128,7 @@ ul {
 
 /* Estilo DETALLE PELICULAS (detail-movie) */
 .bodydetailmovie {
-    background-image: url(../img/MammaMiacover\ copy.webp);
+    background-color: #1e2061;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -264,7 +264,7 @@ ul {
 /* Estilo DETALLE SERIES (detail-serie) */
 
 .bodydetailserie {
-    background-image: url(../img/B99Cover\ copy.jpeg);
+    background-color: #1e2061;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
