@@ -25,12 +25,12 @@ window.addEventListener('load', function () {
       }
   }, 2000);
   })
-  
-  noData.style.display = 'none'
-    serRes.innerText =`Resultados de búsqueda para: ${captura}`
 
-    api_key= '3d4602582547bc4afa8f74ef23bb1e57'
-    let searchPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=3d4602582547bc4afa8f74ef23bb1e57&query=${captura}&page=1`
+  noData.style.display = 'none'
+  serRes.innerText =`Resultados de búsqueda para: ${captura}`
+
+  api_key= '3d4602582547bc4afa8f74ef23bb1e57'
+  let searchPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=3d4602582547bc4afa8f74ef23bb1e57&query=${captura}&page=1`
 
     // traemos las peliculas
   fetch(searchPeliculas)
