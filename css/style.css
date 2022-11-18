@@ -121,7 +121,7 @@ a.img {
     background-color: #1e20619e;
     padding: 1%;
     align-items: center;
-    max-width: 260px;
+    max-width: 228px;
     margin-bottom: 30px;
 }
 
@@ -205,15 +205,15 @@ ul {
 }
 
 .articlesection3detailmovie {
-    width: 20%;
+    width: 30%;
     background-color: rgba(255, 255, 255, 0.56);
     border-radius: 10%;
     text-align: center;
-    padding-top: 4%;
+    padding-top: 2%;
 }
 
 .h4section3detailmovie {
-    font-size: larger;
+    font-size: x-large;
 }
 
 .listsdetailmovie {
@@ -223,11 +223,11 @@ ul {
 .itemlista1detailmovie {
     list-style-type: none;
     width: 70%;
-    height: 50px;
+    height: 55px;
     text-align: center;
     background-color: rgb(131, 72, 133);
     border: solid 2px rgb(95 55 96);
-    padding: 12px;
+    padding: 16px;
     margin: 5% 15%;
     border-radius: 20%;
 }
