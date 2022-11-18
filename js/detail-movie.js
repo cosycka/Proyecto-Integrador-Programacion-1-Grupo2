@@ -1,6 +1,6 @@
-let qs = location.search;
-let qsObj = new URLSearchParams(qs);
-let idPelicula = qsObj.get('id');
+let qs = location.search; //la qs captura toda la url con location que tiene la propiedad search(que acorta la url y me manda el qs)
+let qsObj = new URLSearchParams(qs); //la transformamos en objeto literal para poder manipularla
+let idPelicula = qsObj.get('id'); //me da el id 
 
 //api key y el endpoint de detalle de peliculas
 api_key= '3d4602582547bc4afa8f74ef23bb1e57'

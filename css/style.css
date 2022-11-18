@@ -120,6 +120,9 @@ a.img {
 .fondo {
     background-color: #1e20619e;
     padding: 1%;
+    align-items: center;
+    max-width: 260px;
+    margin-bottom: 30px;
 }
 
 ul {
