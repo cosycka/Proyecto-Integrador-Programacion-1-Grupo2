@@ -20,7 +20,7 @@ fetch(generosPeliculas) //retornaba una promesa
     for (let i = 0; i < 5; i++) {
         contenido  += 
         `<li class="genero-terror">
-            <a class="linkgenerosseries" href="detail-genres.html?id=${generos[i].id}">${generos[i].name}</a>
+            <a class="linkgenerosseries" href="detail-genres.html?id=${generos[i].id}&type=pelicula">${generos[i].name}</a>
         </li>`
     } 
     listaPelicula.innerHTML=contenido //para que se edite todo el html
@@ -42,7 +42,7 @@ fetch(generosSeries)
     for (let i = 0; i < 5; i++) {
         contenido  += 
         `<li class="genero-terror">
-            <a class="linkgenerosseries" href="detail-genres.html?id=${generos[i].id}">${generos[i].name}</a>
+            <a class="linkgenerosseries" href="detail-genres.html?id=${generos[i].id}&type=serie">${generos[i].name}</a>
         </li>`
         
     } 

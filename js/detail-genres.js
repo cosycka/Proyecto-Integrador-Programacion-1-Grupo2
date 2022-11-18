@@ -1,22 +1,25 @@
 //capturo qs
 let qs = location.search;
 let qsObj = new URLSearchParams(qs);
-let idGenero = qsObj.get('idGenero');
+let idGenero = qsObj.get('id');
+let type = qsObj.get('type');
+console.log(idGenero)
 
 //api
 api_key= '3d4602582547bc4afa8f74ef23bb1e57'
-let detallePeliculas = `https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${idGenero}&with_watch_monetization_types=flatrate`
-let detalleSeries = `https://api.themoviedb.org/3/discover/tv?api_key=${api_key}&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&with_genres=${idGenero}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`
+let detallePeliculas = `https://api.themoviedb.org/3/discover/movie?api_key=3d4602582547bc4afa8f74ef23bb1e57&language=en-US&with_genres=${idGenero}`
+
+let detalleSeries = `https://api.themoviedb.org/3/discover/tv?api_key=3d4602582547bc4afa8f74ef23bb1e57&language=en-USsort_by=popularitydesc&page=1&timezone=America%2FNew_York&with_genres=${idGenero}&include_null_first_air_dates=falsewith_watch_monetization_types=flatrate&with_status=0&with_type=0`
 
 
 //Capturo elementos
 let seccionGenerosPeliculas = document.querySelector(".caja_peliculas");
 let seccionGenerosSeries = document.querySelector(".caja_series");
-let PelisH3 = document.querySelector(".peliculasGenerosH3");
-let h2Series = document.querySelector(".h2dgseries");
-
+let pelis = document.querySelector(".peliculasGenerosH3");
+let seri = document.querySelector(".seriesGenerosH3")
 
 //Generos peliculas
+if(type == 'pelicula'){
 fetch(detallePeliculas)
     .then(function (respuesta) {
         return respuesta.json()
@@ -24,33 +27,30 @@ fetch(detallePeliculas)
     })
     .then(function (data) {
         console.log(data.results)
-         let peliculas = data.results;
-         
-         if (peliculas.length> 0){
-         let contenido = ""
-         for (let i = 0; i < 5; i++) {
-                contenido += 
+        let peliculas = data.results; 
+
+        pelis.innerHTML = `<h3 class="tituloterror peliculasGenerosH3"> Peliculas:</h3>`  
+        let contenido = ""
+            for (let i = 0; i < 5; i++) {
+            contenido += 
                 `<article class="fondo">
-                    <img src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}" width="200" height="250" alt="imagen ${peliculas[i].title}">
+                    <img src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}" width="200" height="250" alt="poster de: ${peliculas[i].title}">
                     <p class="textoindex"> <b> ${peliculas[i].title}</b> <br>
                     Fecha de estreno: ${peliculas[i].release_date} </p>
                     <a href="./detail-movie.html?id=${peliculas[i].id}" class="img">Ver Mas</a>
                 </article>`
                
-            };
-            seccionGenerosPeliculas.innerHTML= contenido;
-        } else {
-            seccionGenerosPeliculas.innerHTML= `<h2> No hay peliculas para el género seleccionado</h2>`
-
-        }
-    })
-    .catch(function (error) {
+                };
+        seccionGenerosPeliculas.innerHTML= contenido;
+    }
+    ).catch(function (error) {
         return error
-
+    
     })
+}
 
 /*generos series*/
-
+if(type == 'serie'){
 fetch(detalleSeries)
     .then(function (respuesta) {
         return respuesta.json()
@@ -59,7 +59,7 @@ fetch(detalleSeries)
     .then(function (data) {
         console.log(data.results)
         let series= data.results;
-        if (series.length> 0){
+        seri.innerHTML='<h3 class="tituloterror seriesGenerosH3">Series: </h3>'
         let contenido1=""
         for (let i = 0; i < 5; i++) {
             contenido1+= 
@@ -70,22 +70,20 @@ fetch(detalleSeries)
                 <a href="./detail-serie.html?id=${series[i].id}" class="img">Ver Mas</a>
             </article>  `
                             
-        };
-        seccionGenerosSeries.innerHTML= contenido1;
-    } else{
-        seccionGenerosSeries.innerHTML= `<h2> No hay series para el género seleccionado</h2>`
     }
+    seccionGenerosSeries.innerHTML= contenido1;
 
 
     })
     .catch(function (error) {
         return error
 
-    })
+})
+}
 
 //FORMULARIO 
 
-let formulario= document.querySelector(".formulario");
+let formulario = document.querySelector(".formulario");
 let campo= document.querySelector("[name=busquedacodigo]");
 
 formulario.addEventListener('submit', function(event) {
@@ -97,7 +95,5 @@ formulario.addEventListener('submit', function(event) {
         alert("Su búsqueda debe tener al menos tres caracteres")
     }else {
         this.submit()
-    }
-
-    
+    }   
 })

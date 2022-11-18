@@ -26,19 +26,19 @@ window.addEventListener('load', function () {
   });
   })
 
-noData.style.display = 'none'  
-serRes.innerText =`Resultados de búsqueda para: ${captura}`
+  noData.style.display = 'none'  
+  serRes.innerText =`Resultados de búsqueda para: ${captura}`
 
-api_key= '3d4602582547bc4afa8f74ef23bb1e57'
-let searchPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=3d4602582547bc4afa8f74ef23bb1e57&query=${captura}&page=1`
-let searchSeries=`https://api.themoviedb.org/3/search/tv?api_key=3d4602582547bc4afa8f74ef23bb1e57&language=en-US&page=1&query=${captura}&include_adult=false`
+  api_key= '3d4602582547bc4afa8f74ef23bb1e57'
+  let searchPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=3d4602582547bc4afa8f74ef23bb1e57&query=${captura}&page=1`
+  let searchSeries=`https://api.themoviedb.org/3/search/tv?api_key=3d4602582547bc4afa8f74ef23bb1e57&language=en-US&page=1&query=${captura}&include_adult=false`
 
 // traemos las peliculas
-fetch(searchPeliculas)
-.then(function(response) {
-  return response.json()
-})
-.then(function(data) {
+  fetch(searchPeliculas)
+  .then(function(response) {
+    return response.json()
+  })
+  .then(function(data) {
     console.log(data.results);
     let peliculas= data.results
     let contenido = ""
@@ -64,27 +64,27 @@ fetch(searchPeliculas)
   })
 
 //traemos las series
-fetch(searchSeries)
-.then(function(response) {
-  return response.json()
+  fetch(searchSeries)
+  .then(function(response) {
+    return response.json()
 })
-.then(function(data) {
-    console.log(data.results);
-    let series= data.results
-    let contenido1 = ""
-    if (data.results.length == 0) {
-      series.style.display = 'none'
-    }
-    else{
-      for (let i = 0; i < data.results.length; i++) {
-        contenido1 += 
+  .then(function(data) {
+      console.log(data.results);
+      let series= data.results
+      let contenido1 = ""
+      if (data.results.length == 0) {
+        series.style.display = 'none'
+      }
+      else{
+        for (let i = 0; i < data.results.length; i++) {
+          contenido1 += 
           `<article class="fondo">
             <img src="https://image.tmdb.org/t/p/w500/${series[i].poster_path} " width="200" height="250" alt="Poster de: ${series[i].original_name}">
             <p class="textoindex"> <b> ${series[i].original_name}</b> <br>
             Fecha de estreno: ${series[i].first_air_date} </p>
             <a href="./detail-movie.html?id=${series[i].id}" class="img">Ver Mas</a>
           </article>` 
-          serie1.innerHTML = contenido1
+            serie1.innerHTML = contenido1
       }
     }
       
