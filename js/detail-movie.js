@@ -11,9 +11,11 @@ let detallePelicula = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=
 // capturando elementos del dom
 let titulo = document.querySelector('.titledetailmovie')
 let estreno = document.querySelector('.estreno')
+let calificacion = document.querySelector('.calificacion')
 let duracion= document.querySelector('.duracion')
 let poster = document.querySelector('.movieposterdetailmovie')
 let sinopsis = document.querySelector('.sinopsis')
+let generos = document.querySelector('.listsdetailmovie')
 //let generos = document.querySelector('.')
 
 
@@ -23,12 +25,19 @@ fetch(detallePelicula)
 })
 .then(function (data) {
     console.log(data);
-    
+
     titulo.innerHTML= data.original_title;
+    calificacion.innerHTML = `${data.vote_average}/10`;
     estreno.innerHTML= data.release_date;
-    duracion.innerHTML= data.runtime; //como agregar minutos
+    duracion.innerHTML= `${data.runtime} min`
     poster.src=`https://image.tmdb.org/t/p/w500${data.poster_path}`;
     sinopsis.innerHTML= data.overview;
+    for (let index = 0; index < data.genres.length; index++) {
+        generos.innerHTML += ` <li class="itemlista1detailmovie"> <a class="linknavdetailmovie"
+        href="./detail-genres.html?id=${data.genres[index].id}&type=pelicula">${data.genres[index].name}</a></li>`
+        
+    }
+
 
     //generos
 

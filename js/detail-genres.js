@@ -32,13 +32,12 @@ fetch(detallePeliculas)
         pelis.innerHTML = `<h3 class="tituloterror peliculasGenerosH3"> Peliculas:</h3>`  
         let contenido = ""
             for (let i = 0; i < 5; i++) {
-            contenido += 
-                `<article class="fondo">
-                    <img src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}" width="200" height="250" alt="poster de: ${peliculas[i].title}">
-                    <p class="textoindex"> <b> ${peliculas[i].title}</b> <br>
-                    Fecha de estreno: ${peliculas[i].release_date} </p>
-                    <a href="./detail-movie.html?id=${peliculas[i].id}" class="img">Ver Mas</a>
-                </article>`
+            contenido += `<article class="fondo">
+                            <img src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}" width="200" height="250" alt="poster de: ${peliculas[i].title}">
+                            <p class="textoindex"> <b> ${peliculas[i].title}</b> <br>
+                            Fecha de estreno: ${peliculas[i].release_date} </p>
+                            <a href="./detail-movie.html?id=${peliculas[i].id}" class="img">Ver Mas</a>
+                        </article>`
                
                 };
         seccionGenerosPeliculas.innerHTML= contenido;
