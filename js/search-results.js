@@ -23,10 +23,15 @@ window.addEventListener('load', function () {
       if (pelicula.style.display == 'none'&&series.style.display == 'none') {
         noData.style.display = 'block'
       }
-  });
+      
+  },2000);
   })
 
-  noData.style.display = 'none'  
+
+
+
+
+  noData.style.display = 'none'   
   serRes.innerText =`Resultados de búsqueda para: ${captura}`
 
   api_key= '3d4602582547bc4afa8f74ef23bb1e57'
@@ -92,4 +97,22 @@ window.addEventListener('load', function () {
   .catch(function(error) {
     console.log("Error: " + error);
   })
+
+
+  //FORMULARIO 
+
+let formulario= document.querySelector(".formulario");
+let campo= document.querySelector("[name=busquedacodigo]");
+
+formulario.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if ( campo.value =="") {
+        alert("El campo de busqueda esta vacio")
+    } else if (campo.value.length< 3){
+        alert("Su búsqueda debe tener al menos tres caracteres")
+    }else {
+        this.submit()
+    }   
+})
 
