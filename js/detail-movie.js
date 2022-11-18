@@ -5,6 +5,7 @@ let idPelicula = qsObj.get('id'); //me da el id
 //api key y el endpoint de detalle de peliculas
 api_key= '3d4602582547bc4afa8f74ef23bb1e57'
 let detallePelicula = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${api_key}&language=en-US`
+let recoPelicula = `https://api.themoviedb.org/3/movie/${idPelicula}/recommendations?api_key=${api_key}&language=en-US&page=1`
 
 
 
@@ -16,6 +17,7 @@ let duracion= document.querySelector('.duracion')
 let poster = document.querySelector('.movieposterdetailmovie')
 let sinopsis = document.querySelector('.sinopsis')
 let generos = document.querySelector('.listsdetailmovie')
+let reco = document.querySelector('.reco')
 //let generos = document.querySelector('.')
 
 
@@ -46,6 +48,35 @@ fetch(detallePelicula)
     console.log(errores);
 })
 
+console.log(recoPelicula); 
+// Fetch de Recommendations
+fetch(recoPelicula)
+.then(function(response){
+    return response.json();
+})
+
+.then(function(data){
+    let datos = data.results;
+
+    let contenido = "";
+    for (let i = 0; i < 3; i++) {
+        contenido += `<article class="fondo">
+                        <img src="https://image.tmdb.org/t/p/w500/${datos[i].poster_path}" width="200" height="250" alt="imagen b99">
+                        <p class="textoindex"> <b>${datos[i].title}</b> <br>
+                        Fecha de estreno: ${datos[i].release_date}</p>
+                        <a href="./detail-movie.html?id=${datos[i].id}" class="img">Ver Mas</a>
+                    </article>`
+    }
+
+    reco.innerHTML = contenido;
+
+    
+    return data
+})
+
+.catch(function (errores) {
+    console.log(errores);
+})
 //FORMULARIO 
 
 let formulario= document.querySelector(".formulario");
