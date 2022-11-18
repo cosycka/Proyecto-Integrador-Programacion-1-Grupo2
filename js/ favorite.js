@@ -1,6 +1,9 @@
 
 
 
+
+
+
 //FORMULARIO 
 
 let formulario= document.querySelector(".formulario");

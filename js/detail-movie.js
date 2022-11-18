@@ -32,14 +32,12 @@ fetch(detallePelicula)
     duracion.innerHTML= `${data.runtime} min`
     poster.src=`https://image.tmdb.org/t/p/w500${data.poster_path}`;
     sinopsis.innerHTML= data.overview;
+
     for (let index = 0; index < data.genres.length; index++) {
         generos.innerHTML += ` <li class="itemlista1detailmovie"> <a class="linknavdetailmovie"
         href="./detail-genres.html?id=${data.genres[index].id}&type=pelicula">${data.genres[index].name}</a></li>`
         
     }
-
-
-    //generos
 
     return data
     
