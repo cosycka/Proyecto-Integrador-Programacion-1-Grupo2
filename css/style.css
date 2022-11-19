@@ -83,6 +83,10 @@ nav {
 
 }
 
+.titlefavoritos{
+    font-size: 40px;
+}
+
 .caja {
     display: flex; /* defini al contenedor padre como un un contenedor flexible.*/
     flex-wrap: wrap; /*container respete los anchos de sus hijos.*/
@@ -265,6 +269,9 @@ ul {
     border: solid 2px rgba(255, 255, 255, 0.56);
     color: white;
     padding: 12px 24px;
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 170px;
 }
 
 .imgprov{

@@ -21,6 +21,7 @@ let generos = document.querySelector('.listsdetailmovie')
 let reco = document.querySelector('.reco')
 let recobutton = document.querySelector('.buttongetrecommendations')
 let listaprov = document.querySelector('.listaprov')
+let botonfav = document.querySelector(".clicfav")
 
 
 fetch(detallePelicula)
@@ -111,7 +112,7 @@ fetch(provPelicula)
         let datosprov = data1.results;
         console.log(data1.results);
         let contenidoprov = ""
-        
+
         // elijo en US
         if (datosprov.US && datosprov.US.buy) {
             console.log(datosprov.US.buy);
@@ -132,6 +133,34 @@ fetch(provPelicula)
     })
 
 
+
+//Favoritos
+let favPeliculas= [];
+let recuperoStorage = localStorage.getItem("favPeliculas")
+
+if (recuperoStorage != null) {
+    favPeliculas = JSON.parse(recuperoStorage)
+}
+if (favPeliculas.includes(idPelicula)) {
+    botonfav.innerText = "Quitar de favoritos"
+}
+
+botonfav.addEventListener("click", function(e) {
+    e.preventDefault()
+
+    if (favPeliculas.includes(idPelicula)) {
+       let indice = favPeliculas.indexOf(idPelicula)
+       favPeliculas.splice(indice, 1);
+       botonfav.innerText = " Agregar a Favoritos"
+    }
+    else{
+        favPeliculas.push(idPelicula);
+        botonfav.innerText = "Quitar de Favoritos"
+    }
+
+    let favpeliculasstr = JSON.stringify(favPeliculas);
+    localStorage.setItem("favPeliculas", favpeliculasstr)
+})
 
 
 //FORMULARIO 
