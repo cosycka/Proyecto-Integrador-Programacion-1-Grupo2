@@ -12,8 +12,8 @@ let provPelicula = `https://api.themoviedb.org/3/movie/${idPelicula}/watch/provi
 
 // capturando elementos del dom
 let titulo = document.querySelector('.titledetailmovie')
-let estreno = document.querySelector('.estreno')
 let calificacion = document.querySelector('.calificacion')
+let estreno = document.querySelector('.estreno')
 let duracion = document.querySelector('.duracion')
 let poster = document.querySelector('.movieposterdetailmovie')
 let sinopsis = document.querySelector('.sinopsis')
