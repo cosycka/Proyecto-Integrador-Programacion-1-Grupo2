@@ -42,7 +42,7 @@ else{
 // series
 let contenidoseriesfav = "";
 if (seriesfavoritas == null || seriesfavoritas.length ==0){
-    sectionSeries.innerHTML = `<p> No se agregaron series a favoritos <p/>`
+    sectionSeries.innerHTML = `<article><p class= pnohayfav> No se agregaron series a favoritos <p/></article>`
 }
 else{
     for (let i = 0; i < seriesfavoritas.length; i++) {
@@ -58,7 +58,7 @@ else{
                                             <img src="https://image.tmdb.org/t/p/w500/${dataseries.poster_path}" width="200" height="250" alt="imagen Mamma Mia">
                                             <p class="textoindex"> <b>${dataseries.name}</b> <br>
                                             Fecha de estreno: ${dataseries.first_air_date}</p>
-                                            <a href="./detail-movie.html?id=${dataseries.id}" class="img">Ver Mas</a>
+                                            <a href="./detail-serie.html?id=${dataseries.id}" class="img">Ver Mas</a>
                                         </article>`
             
             sectionSeries.innerHTML = contenidoseriesfav;

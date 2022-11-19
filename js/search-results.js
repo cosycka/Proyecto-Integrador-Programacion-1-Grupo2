@@ -87,7 +87,7 @@ window.addEventListener('load', function () {
             <img src="https://image.tmdb.org/t/p/w500/${series[i].poster_path} " width="200" height="250" alt="Poster de: ${series[i].original_name}">
             <p class="textoindex"> <b> ${series[i].original_name}</b> <br>
             Fecha de estreno: ${series[i].first_air_date} </p>
-            <a href="./detail-movie.html?id=${series[i].id}" class="img">Ver Mas</a>
+            <a href="./detail-serie.html?id=${series[i].id}" class="img">Ver Mas</a>
           </article>` 
             serie1.innerHTML = contenido1
       }

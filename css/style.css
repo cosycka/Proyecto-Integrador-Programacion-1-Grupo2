@@ -295,7 +295,10 @@ ul {
 
 /* Estilo FAVORITOS (favorite) */
 
-
+.pnohayfav{
+    display: flex;
+    justify-content: center;
+}
 
 
 /* Estilo GENEROS (genres) */
