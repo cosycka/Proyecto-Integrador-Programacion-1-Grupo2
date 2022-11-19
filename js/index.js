@@ -121,6 +121,6 @@ formulario.addEventListener('submit', function(event) {
     
 })
 
-// CARRUSEL
+// // CARRUSEL
 
-UIkit.slider(element, options);
+// UIkit.slider(element, options);

@@ -12,9 +12,149 @@ let provSerie= `https://api.themoviedb.org/3/tv/${idSerie}/watch/providers?api_k
 let titulo = document.querySelector('.titledetailserie')
 let calificacion = document.querySelector('.calificacion')
 let estreno = document.querySelector('.estreno')
+let episodes = document.querySelector('.episodecountseries')
 let poster = document.querySelector('.movieposterdetailserie')
 let sinopsis = document.querySelector('.sinopsis')
-let generos = document.querySelector('.listsdetailserie')
+let generosseries = document.querySelector('.listsdetailserie')
+let reco = document.querySelector('.reco')
+let recobutton = document.querySelector('.buttongetrecommendationsserie')
+let botonfav = document.querySelector(".clicfavserie")
+let listaprov = document.querySelector('.listaprovserie')
+
+
+
+fetch(detalleSerie)
+.then(function(response){
+    return response.json()
+})
+.then(function(data){
+    console.log(data);
+
+    titulo.innerHTML = data.name;
+    calificacion.innerHTML = `${data.vote_average}/10`;
+    estreno.innerHTML = data.first_air_date;
+    episodes.innerHTML = data.number_of_episodes;
+    poster.src = `https://image.tmdb.org/t/p/w500${data.poster_path}`;
+    sinopsis.innerHTML = data.overview
+
+    for (let index = 0; index < data.genres.length; index++) {
+        generosseries.innerHTML += `<li class="itemlista1detailmovie"> <a class="linknavdetailmovie"
+        href="./detail-genres.html?id=${data.genres[index].id}&type=serie">${data.genres[index].name}</a></li>`
+    }
+
+    return data
+
+})
+.catch(function(error){
+    console.log(error);
+})
+
+
+// Fetch de Recommendations
+fetch(recoSerie)
+.then(function(response){
+    return response.json()
+})
+.then(function(data){
+    console.log(data)
+    datareco = data.results
+    contenido = ""
+
+    for (let i = 0; i < 3; i++) {
+        contenido += `<article class="fondo">
+                        <img src="https://image.tmdb.org/t/p/w500/${datareco[i].poster_path}" width="200" height="250" alt="imagen b99">
+                        <p class="textoindex"> <b>${datareco[i].name}</b> <br>
+                        Fecha de estreno: ${datareco[i].first_air_date}</p>
+                        <a href="./detail-serie.html?id=${datareco[i].id}" class="img">Ver Mas</a>
+                    </article>`
+    }
+    reco.innerHTML = contenido;
+
+    return data
+})
+.catch(function(error){
+    console.log(error)
+})
+
+
+// seccion de recomendaciones
+let sectRecomendacionesseries = false
+recobutton.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    if (sectRecomendacionesseries == false) {
+        reco.style.display = 'flex';
+        recobutton.innerText = 'Esconder Recomendaciones';
+        sectRecomendacionesseries = true;
+    }
+    else {
+        reco.style.display = 'none';
+        recobutton.innerText = 'Ver Recomendaciones';
+        sectRecomendacionesseries = false
+
+    }
+})
+
+
+// Fetch Providers
+fetch(provSerie)
+    .then(function (response) {
+        return response.json()
+    })
+
+    .then(function (data) {
+        let datosprovserie = data.results;
+        console.log(data.results);
+        let contenidoprovseries = ""
+
+        // elijo en US
+        if (datosprovserie.US && datosprovserie.US.buy) {
+            console.log(datosprovserie.US.buy);
+            let provarray = datosprovserie.US.buy
+            
+            for (let i = 0; i < provarray.length; i++) {
+                contenidoprovseries += `<li>
+                                        <h4>${provarray[i].provider_name}</h4>
+                                        <img class="imgprov" src="https://image.tmdb.org/t/p/w500/${provarray[i].logo_path}" alt="${provarray[i].provider_name} Icono">
+                                    </li>`
+            }
+            listaprov.innerHTML = contenidoprovseries
+        }
+        else {
+            listaprov.innerText = "No hay proveedores en los Estados Unidos "
+        }
+
+    })
+
+
+//Favoritos
+let favSeries= [];
+let recuperoStorage = localStorage.getItem("favSeries")
+
+if (recuperoStorage != null) {
+    favSeries = JSON.parse(recuperoStorage)
+}
+if (favSeries.includes(idSerie)) {
+    botonfav.innerText = "Quitar de favoritos"
+}
+
+botonfav.addEventListener("click", function(e) {
+    e.preventDefault()
+
+    if (favSeries.includes(idSerie)) {
+       let indice = favSeries.indexOf(idSerie)
+       favSeries.splice(indice, 1);
+       botonfav.innerText = " Agregar a Favoritos"
+    }
+    else{
+        favSeries.push(idSerie);
+        botonfav.innerText = "Quitar de Favoritos"
+    }
+
+    let favSeriesstr = JSON.stringify(favSeries);
+    localStorage.setItem("favSeries", favSeriesstr)
+})
+
 
 
 //FORMULARIO 

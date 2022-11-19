@@ -20,8 +20,9 @@ let sinopsis = document.querySelector('.sinopsis')
 let generos = document.querySelector('.listsdetailmovie')
 let reco = document.querySelector('.reco')
 let recobutton = document.querySelector('.buttongetrecommendations')
-let listaprov = document.querySelector('.listaprov')
 let botonfav = document.querySelector(".clicfav")
+let listaprov = document.querySelector('.listaprov')
+
 
 
 fetch(detallePelicula)
@@ -50,7 +51,6 @@ fetch(detallePelicula)
     .catch(function (errores) {
         console.log(errores);
     })
-
 
 
 // Fetch de Recommendations
@@ -101,7 +101,7 @@ recobutton.addEventListener("click", function (e) {
     // ver como hacer para que no aparezcan al abrir la pagina
 })
 
-console.log(provPelicula); //creo que se puede sacar
+
 // Fetch Providers
 fetch(provPelicula)
     .then(function (response) {
