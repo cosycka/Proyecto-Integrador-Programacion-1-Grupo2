@@ -212,6 +212,10 @@ ul {
     padding-top: 2%;
 }
 
+.artproveedores{
+    padding-top: 0%;
+}
+
 .h4section3detailmovie {
     font-size: x-large;
 }
@@ -261,6 +265,12 @@ ul {
     border: solid 2px rgba(255, 255, 255, 0.56);
     color: white;
     padding: 12px 24px;
+}
+
+.imgprov{
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
 }
 
 

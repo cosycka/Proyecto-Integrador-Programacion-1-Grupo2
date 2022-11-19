@@ -20,6 +20,7 @@ let sinopsis = document.querySelector('.sinopsis')
 let generos = document.querySelector('.listsdetailmovie')
 let reco = document.querySelector('.reco')
 let recobutton = document.querySelector('.buttongetrecommendations')
+let listaprov = document.querySelector('.listaprov')
 
 
 fetch(detallePelicula)
@@ -99,7 +100,7 @@ recobutton.addEventListener("click", function (e) {
     // ver como hacer para que no aparezcan al abrir la pagina
 })
 
-console.log(provPelicula);
+console.log(provPelicula); //creo que se puede sacar
 // Fetch Providers
 fetch(provPelicula)
     .then(function (response) {
@@ -109,20 +110,24 @@ fetch(provPelicula)
     .then(function (data1) {
         let datosprov = data1.results;
         console.log(data1.results);
+        let contenidoprov = ""
+        
         // elijo en US
-        if (datosprov.US) {
+        if (datosprov.US && datosprov.US.buy) {
             console.log(datosprov.US.buy);
-            let contenidoprov = ""
             let provarray = datosprov.US.buy
-
+            
             for (let i = 0; i < provarray.length; i++) {
                 contenidoprov += `<li>
                                         <h4>${provarray[i].provider_name}</h4>
-                                        <img class="imgprov" src="https://image.tmdb.org/t/p/w500${provarray[i].logo_path}" alt="${provarray[i].provider_name} Icono">
+                                        <img class="imgprov" src="https://image.tmdb.org/t/p/w500/${provarray[i].logo_path}" alt="${provarray[i].provider_name} Icono">
                                     </li>`
             }
+            listaprov.innerHTML = contenidoprov
         }
-
+        else {
+            listaprov.innerText = "No hay proveedores en los Estados Unidos "
+        }
 
     })
 
