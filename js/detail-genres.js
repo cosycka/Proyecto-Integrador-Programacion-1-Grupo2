@@ -31,7 +31,7 @@ fetch(detallePeliculas)
 
         pelis.innerHTML = `<h3 class="tituloterror peliculasGenerosH3"> Peliculas:</h3>`  
         let contenido = ""
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < peliculas.length; i++) { //se van a ver todas las peliculas de ese genero que contenga la api
             contenido += `<article class="fondo">
                             <img src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}" width="200" height="250" alt="poster de: ${peliculas[i].title}">
                             <p class="textoindex"> <b> ${peliculas[i].title}</b> <br>
@@ -60,7 +60,7 @@ fetch(detalleSeries)
         let series= data.results;
         seri.innerHTML='<h3 class="tituloterror seriesGenerosH3">Series: </h3>'
         let contenido1=""
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < series.length; i++) {
             contenido1+= 
             `<article class="fondo">
                 <img src="https://image.tmdb.org/t/p/w500${series[i].poster_path}" width="200" height="250" alt="imagen ${series[i].name}">
