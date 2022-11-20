@@ -1,7 +1,7 @@
 //capturo qs
-let qs = location.search;
-let qsObj = new URLSearchParams(qs);
-let idGenero = qsObj.get('id');
+let qs = location.search; // la propiedad search va a almacenar la query string de la url. location.search retorna una cadena de texto por lo que va a ser más difícil manipularlo en un futuro.
+let qsObj = new URLSearchParams(qs); // define métodos útiles para trabajar con los parámetros de una URL.
+let idGenero = qsObj.get('id'); // permite obtener el valor de una clave dentro de la query string.
 let type = qsObj.get('type');
 console.log(idGenero)
 
@@ -37,8 +37,7 @@ fetch(detallePeliculas)
                             <p class="textoindex"> <b> ${peliculas[i].title}</b> <br>
                             Fecha de estreno: ${peliculas[i].release_date} </p>
                             <a href="./detail-movie.html?id=${peliculas[i].id}" class="img">Ver Mas</a>
-                        </article>`
-               
+                        </article>`  //con la etiqueta a y el atributo href, se pone como valor los datos que queremos que viajen por la URL una vez que el usuario clickee el link. 
                 };
         seccionGenerosPeliculas.innerHTML= contenido;
     }
