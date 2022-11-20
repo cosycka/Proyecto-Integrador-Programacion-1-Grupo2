@@ -7,6 +7,7 @@ api_key= '3d4602582547bc4afa8f74ef23bb1e57'
 let detalleSerie= `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key}&language=en-US`
 let recoSerie= `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${api_key}&language=en-US&page=1`
 let provSerie= `https://api.themoviedb.org/3/tv/${idSerie}/watch/providers?api_key=${api_key}`
+let trailerSerie = `https://api.themoviedb.org/3/tv/${idSerie}/videos?api_key=${api_key}&language=en-US`
 
 // capturando elementos del dom
 let titulo = document.querySelector('.titledetailserie')
@@ -20,6 +21,7 @@ let reco = document.querySelector('.reco')
 let recobutton = document.querySelector('.buttongetrecommendationsserie')
 let botonfav = document.querySelector(".clicfavserie")
 let listaprov = document.querySelector('.listaprovserie')
+let trailer = document.querySelector('.trailerdetailserie')
 
 
 
@@ -44,6 +46,42 @@ fetch(detalleSerie)
 
     return data
 
+})
+.catch(function(error){
+    console.log(error);
+})
+
+
+// Fetch Trailer
+fetch(trailerSerie)
+.then(function(response){
+    return response.json();
+})
+.then(function(data){
+    let datavideos = data.results;
+    console.log(datavideos)
+    let contenidotrailer = "";
+    
+    if (datavideos == null || datavideos.length ==0 ||datavideos == undefined){
+        contenidotrailer = ` <p class=pnohayfav>La pelicula no tiene trailer disponible</p>`
+    }
+    else{
+        for (let i = 0; i < datavideos.length; i++) {
+            if (datavideos[i].type == "Trailer"){
+                contenidotrailer=` <h2 class="trailertitledetailmovie trailerdetailserie">Trailer:</h2>
+                           <iframe width="100%" height="315" src="https://www.youtube.com/embed/${datavideos[i].key}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>`
+            }
+        }
+        if (contenidotrailer == ""){
+            contenidotrailer = ` <p class=pnohayfav>La pelicula no tiene trailer disponible</p>`
+        }
+    }
+
+    trailer.innerHTML = contenidotrailer;
+    return data
 })
 .catch(function(error){
     console.log(error);
