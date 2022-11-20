@@ -7,6 +7,7 @@ api_key = '3d4602582547bc4afa8f74ef23bb1e57'
 let detallePelicula = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${api_key}&language=en-US`
 let recoPelicula = `https://api.themoviedb.org/3/movie/${idPelicula}/recommendations?api_key=${api_key}&language=en-US&page=1`
 let provPelicula = `https://api.themoviedb.org/3/movie/${idPelicula}/watch/providers?api_key=${api_key}`
+let trailerPelicula = `https://api.themoviedb.org/3/movie/${idPelicula}/videos?api_key=${api_key}&language=en-US`
 
 
 
@@ -22,6 +23,7 @@ let reco = document.querySelector('.reco')
 let recobutton = document.querySelector('.buttongetrecommendations')
 let botonfav = document.querySelector(".clicfav")
 let listaprov = document.querySelector('.listaprov')
+let trailer = document.querySelector('.trailerdetailmovie')
 
 
 
@@ -51,6 +53,42 @@ fetch(detallePelicula)
     .catch(function (errores) {
         console.log(errores);
     })
+
+//a que le pongo punto y coma?
+// Fetch Trailer
+fetch(trailerPelicula)
+.then(function(response){
+    return response.json();
+})
+.then(function(data){
+    let datavideos = data.results;
+    console.log(datavideos)
+    let contenidotrailer = "";
+    
+    if (datavideos == null || datavideos.length ==0 ||datavideos == undefined){
+        contenidotrailer = ` <p class=pnohayfav>La pelicula no tiene trailer disponible</p>`
+    }
+    else{
+        for (let i = 0; i < datavideos.length; i++) {
+            if (datavideos[i].type == "Trailer"){
+                contenidotrailer=` <h2 class="trailertitledetailmovie">Trailer:</h2>
+                           <iframe width="100%" height="315" src="https://www.youtube.com/embed/${datavideos[i].key}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>`
+            }
+        }
+        if (contenidotrailer == ""){
+            contenidotrailer = ` <p class=pnohayfav>La pelicula no tiene trailer disponible</p>`
+        }
+    }
+
+    trailer.innerHTML = contenidotrailer;
+    return data
+})
+.catch(function(error){
+    console.log(error);
+})
 
 
 // Fetch de Recommendations
@@ -124,7 +162,7 @@ fetch(provPelicula)
                                         <img class="imgprov" src="https://image.tmdb.org/t/p/w500/${provarray[i].logo_path}" alt="${provarray[i].provider_name} Icono">
                                     </li>`
             }
-            listaprov.innerHTML = contenidoprov
+            listaprov.innerHTML = contenidoprov;
         }
         else {
             listaprov.innerText = "No hay proveedores en los Estados Unidos "

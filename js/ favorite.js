@@ -35,7 +35,7 @@ else{
     })
     .catch(function(error){
         console.log(error);
-    })
+    })      //hago un console.log, return o los dos?
 }  
 }
 
