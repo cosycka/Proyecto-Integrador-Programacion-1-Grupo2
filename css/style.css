@@ -88,10 +88,10 @@ nav {
 }
 
 .caja {
-    display: flex; /* defini al contenedor padre como un un contenedor flexible.*/
-    flex-wrap: wrap; /*container respete los anchos de sus hijos.*/
-    flex-direction: row; /*crear filas*/
-    justify-content: space-evenly; /*alinear contenido sobre el main axis*/
+    display: flex; 
+    flex-wrap: wrap; 
+    flex-direction: row; 
+    justify-content: space-evenly; 
     margin-bottom: 30px;
 }
 
@@ -127,6 +127,10 @@ a.img {
     align-items: center;
     width: 228px;
     margin-bottom: 30px;
+}
+
+.fondoreco{
+    padding: 2%;
 }
 
 ul {

@@ -42,10 +42,13 @@ fetch(detallePelicula)
         poster.src = `https://image.tmdb.org/t/p/w500${data.poster_path}`;
         sinopsis.innerHTML = data.overview;
 
-        for (let index = 0; index < data.genres.length; index++) {
+        if(data.genres.length ==0 || data.genres == null || data.genres == undefined){
+            generos.innerHTML = `<p class=pnohayfav>La pelicula no tiene generos</p>`
+        }
+        else{
+            for (let index = 0; index < data.genres.length; index++) {
             generos.innerHTML += ` <li class="itemlista1detailmovie"> <a class="linknavdetailmovie"
-        href="./detail-genres.html?id=${data.genres[index].id}&type=pelicula">${data.genres[index].name}</a></li>`
-
+        href="./detail-genres.html?id=${data.genres[index].id}&type=pelicula">${data.genres[index].name}</a></li>`}
         }
 
         return data
@@ -55,7 +58,7 @@ fetch(detallePelicula)
         console.log(errores);
     })
 
-//a que le pongo punto y coma?
+
 // Fetch Trailer
 fetch(trailerPelicula)
 .then(function(response){
@@ -110,9 +113,7 @@ fetch(recoPelicula)
                         <a href="./detail-movie.html?id=${datos[i].id}" class="img">Ver Mas</a>
                     </article>`
         }
-
         reco.innerHTML = contenido;
-
 
         return data
     })

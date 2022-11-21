@@ -13,7 +13,7 @@ let sectionSeries = document.querySelector('.sectionfavseries')
 // peliulas
 let contenidopeliculasfav = "";
 if (peliculasfavoritas == null || peliculasfavoritas.length == 0){
-    sectionPeliculas.innerHTML = `<article><p class= pnohayfav> No se agregaron series a favoritos <p/></article>`
+    sectionPeliculas.innerHTML = `<article><p class= pnohayfav> No se agregaron peliculas a favoritos <p/></article>`
 }
 else{
     for (let i = 0; i < peliculasfavoritas.length; i++) {

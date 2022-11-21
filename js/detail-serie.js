@@ -41,9 +41,14 @@ fetch(detalleSerie)
     poster.src = `https://image.tmdb.org/t/p/w500${data.poster_path}`;
     sinopsis.innerHTML = data.overview
 
-    for (let index = 0; index < data.genres.length; index++) {
-        generosseries.innerHTML += `<li class="itemlista1detailmovie"> <a class="linknavdetailmovie"
-        href="./detail-genres.html?id=${data.genres[index].id}&type=serie">${data.genres[index].name}</a></li>`
+    if(data.genres.length ==0 || data.genres == null || data.genres == undefined){
+        generosseries.innerHTML = `<p class=pnohayfav>La Serie no tiene generos</p>`
+    }
+    else{
+        for (let index = 0; index < data.genres.length; index++) {
+            generosseries.innerHTML += `<li class="itemlista1detailmovie"> <a class="linknavdetailmovie"
+            href="./detail-genres.html?id=${data.genres[index].id}&type=serie">${data.genres[index].name}</a></li>`
+        }
     }
 
     return data
