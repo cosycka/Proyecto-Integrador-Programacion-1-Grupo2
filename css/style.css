@@ -484,6 +484,17 @@ ul {
         text-align: center;
     }
 
+    .body-generos{
+        width: 99%;
+    }
+
+    .lista-generos{
+        flex-direction: column;
+    }
+
+    .bodydetail{
+        width: 100%;
+    }
 }
 
 @media(max-width: 420px) {
@@ -576,6 +587,10 @@ ul {
     .reco{
         display: flex;
         flex-direction: column;
+    }
+
+    .lista-generos{
+        width: 100%;
     }
 
 }
