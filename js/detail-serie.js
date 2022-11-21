@@ -8,6 +8,7 @@ let detalleSerie= `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key}
 let recoSerie= `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${api_key}&language=en-US&page=1`
 let provSerie= `https://api.themoviedb.org/3/tv/${idSerie}/watch/providers?api_key=${api_key}`
 let trailerSerie = `https://api.themoviedb.org/3/tv/${idSerie}/videos?api_key=${api_key}&language=en-US`
+let reviewsSerie = `https://api.themoviedb.org/3/tv/${idSerie}/reviews?api_key=${api_key}&language=en-US&page=1`
 
 // capturando elementos del dom
 let titulo = document.querySelector('.titledetailserie')
@@ -22,6 +23,7 @@ let recobutton = document.querySelector('.buttongetrecommendationsserie')
 let botonfav = document.querySelector(".clicfavserie")
 let listaprov = document.querySelector('.listaprovserie')
 let trailer = document.querySelector('.trailerdetailserie')
+let listareviews = document.querySelector('.listareviewsserie')
 
 
 
@@ -162,6 +164,34 @@ fetch(provSerie)
             listaprov.innerText = "No hay proveedores en los Estados Unidos "
         }
 
+    })
+
+//Reviews
+fetch(reviewsSerie)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data.results);
+         let reviews = data.results
+         let contenidoReviews = ""
+         if (reviews.length>0){
+         for (let i = 0; i < reviews.length; i++) {
+           contenidoReviews+= `<li>
+                <h4> Autor: ${reviews[i].author}</h4>
+                <p> "${reviews[i].content}"</p>
+            </li>`
+         }
+         listareviews.innerHTML = contenidoReviews
+        }
+         else {
+            listareviews.innerText = "No hay reviews disponibles de esta serie "
+        }
+        return data
+
+    })
+    .catch(function (errores) {
+        console.log(errores);
     })
 
 

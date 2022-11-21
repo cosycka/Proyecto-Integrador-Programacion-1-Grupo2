@@ -8,7 +8,7 @@ let detallePelicula = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=
 let recoPelicula = `https://api.themoviedb.org/3/movie/${idPelicula}/recommendations?api_key=${api_key}&language=en-US&page=1`
 let provPelicula = `https://api.themoviedb.org/3/movie/${idPelicula}/watch/providers?api_key=${api_key}`
 let trailerPelicula = `https://api.themoviedb.org/3/movie/${idPelicula}/videos?api_key=${api_key}&language=en-US`
-
+let reviewsPelicula = `https://api.themoviedb.org/3/movie/${idPelicula}/reviews?api_key=${api_key}&language=en-US&page=1`
 
 
 // capturando elementos del dom
@@ -24,6 +24,7 @@ let recobutton = document.querySelector('.buttongetrecommendations')
 let botonfav = document.querySelector(".clicfav")
 let listaprov = document.querySelector('.listaprov')
 let trailer = document.querySelector('.trailerdetailmovie')
+let listareviews = document.querySelector('.listareviews')
 
 
 
@@ -170,6 +171,34 @@ fetch(provPelicula)
 
     })
 
+//Reviews
+fetch(reviewsPelicula)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data.results);
+         let reviews = data.results
+         let contenidoReviews = ""
+         if (reviews.length>0){
+         for (let i = 0; i < reviews.length; i++) {
+           contenidoReviews+= `<li>
+                <h4> Autor: ${reviews[i].author}</h4>
+                <p> "${reviews[i].content}"</p>
+            </li>`
+         }
+         listareviews.innerHTML = contenidoReviews
+        }
+         else {
+            listareviews.innerText = "No hay reviews disponibles de esta pelicula "
+        }
+        return data
+
+    })
+    .catch(function (errores) {
+        console.log(errores);
+    })
+
 
 
 //Favoritos
@@ -199,6 +228,8 @@ botonfav.addEventListener("click", function(e) {
     let favpeliculasstr = JSON.stringify(favPeliculas);
     localStorage.setItem("favPeliculas", favpeliculasstr)
 })
+
+
 
 
 //FORMULARIO 

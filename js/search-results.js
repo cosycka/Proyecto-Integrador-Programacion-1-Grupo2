@@ -27,12 +27,8 @@ window.addEventListener('load', function () {
   },2000);
   })
 
-
-
-
-
   noData.style.display = 'none'   
-  serRes.innerText =`Resultados de búsqueda para: ${captura}`
+  
 
   api_key= '3d4602582547bc4afa8f74ef23bb1e57'
   let searchPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=3d4602582547bc4afa8f74ef23bb1e57&query=${captura}&page=1`
@@ -47,10 +43,13 @@ window.addEventListener('load', function () {
     console.log(data.results);
     let peliculas= data.results
     let contenido = ""
-    if (data.results.length == 0) {
+    if (peliculas.length == 0) {
       pelicula.style.display = 'none'
+      serRes.innerText =`No hay resultados de búsqueda para: ${captura}`
+      
     }
     else{
+      serRes.innerText =`Resultados de búsqueda para: ${captura}`
       for (let i = 0; i < data.results.length; i++) {
         contenido += 
           `<article class="fondo">
@@ -77,8 +76,9 @@ window.addEventListener('load', function () {
       console.log(data.results);
       let series= data.results
       let contenido1 = ""
-      if (data.results.length == 0) {
+      if (series.length == 0) {
         series.style.display = 'none'
+        
       }
       else{
         for (let i = 0; i < data.results.length; i++) {
