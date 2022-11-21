@@ -103,7 +103,7 @@ fetch(recoPelicula)
 
         let contenido = "";
         for (let i = 0; i < 3; i++) {
-            contenido += `<article class="fondo">
+            contenido += `<article class="fondo fondoreco">
                         <img src="https://image.tmdb.org/t/p/w500/${datos[i].poster_path}" width="200" height="250" alt="imagen b99">
                         <p class="textoindex"> <b>${datos[i].title}</b> <br>
                         Fecha de estreno: ${datos[i].release_date}</p>

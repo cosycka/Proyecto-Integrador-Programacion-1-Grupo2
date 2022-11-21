@@ -101,7 +101,7 @@ fetch(recoSerie)
     contenido = ""
 
     for (let i = 0; i < 3; i++) {
-        contenido += `<article class="fondo">
+        contenido += `<article class="fondo fondoreco">
                         <img src="https://image.tmdb.org/t/p/w500/${datareco[i].poster_path}" width="200" height="250" alt="imagen b99">
                         <p class="textoindex"> <b>${datareco[i].name}</b> <br>
                         Fecha de estreno: ${datareco[i].first_air_date}</p>

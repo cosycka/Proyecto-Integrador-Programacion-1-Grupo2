@@ -125,7 +125,7 @@ a.img {
     background-color: #1e20619e;
     padding: 1%;
     align-items: center;
-    max-width: 228px;
+    width: 228px;
     margin-bottom: 30px;
 }
 
@@ -425,6 +425,11 @@ ul {
 
     .fondo{
         margin: 10px;
+        width: 216px;
+    }
+
+    .fondoreco{
+        padding: 1%;
     }
 
     .peli-genero{
@@ -504,6 +509,11 @@ ul {
     .fondo {
         padding: 2%;
         margin-bottom: 15px;
+        width: 216px;
+    }
+
+    .fondoreco{
+        padding: 3%;
     }
 
     footer {
@@ -561,6 +571,11 @@ ul {
 
     .peli-genero{
         margin-bottom: 45px;
+    }
+
+    .reco{
+        display: flex;
+        flex-direction: column;
     }
 
 }
