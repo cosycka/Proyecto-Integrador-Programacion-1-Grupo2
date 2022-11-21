@@ -6,12 +6,11 @@ let captura = qsObj.get('busquedacodigo');
 
 //elementos del dom
 let pelicula = document.querySelector('.peli')
-let series = document.querySelector('.ser')
+let serie = document.querySelector('.ser')
 let serRes = document.querySelector('.searchResul')
 let ser  = document.querySelector('.search')
 let esconder = document.querySelector('.invisible')
 let animacionDeCarga = document.querySelector('.animacionDeCarga')
-let noData = document.querySelector('.noData')
 let pelicula1 = document.querySelector('.peli1')
 let serie1 = document.querySelector('.ser1')
 
@@ -20,15 +19,14 @@ window.addEventListener('load', function () {
     setTimeout( function (){
       esconder.style.display = 'block'
       animacionDeCarga.style.display = 'none'
-      if (pelicula.style.display == 'none'&&series.style.display == 'none') {
-        noData.style.display = 'block'
+      if (pelicula.style.display == 'none'&&serie.style.display == 'none') {
+        serRes.innerText =`No hay resultados de búsqueda para: ${captura}`
+      } else{
+        serRes.innerText =`Resultados de búsqueda para: ${captura}`
       }
       
   },2000);
   })
-
-  noData.style.display = 'none'   
-  
 
   api_key= '3d4602582547bc4afa8f74ef23bb1e57'
   let searchPeliculas = `https://api.themoviedb.org/3/search/movie?api_key=3d4602582547bc4afa8f74ef23bb1e57&query=${captura}&page=1`
@@ -45,11 +43,9 @@ window.addEventListener('load', function () {
     let contenido = ""
     if (peliculas.length == 0) {
       pelicula.style.display = 'none'
-      serRes.innerText =`No hay resultados de búsqueda para: ${captura}`
-      
+         
     }
     else{
-      serRes.innerText =`Resultados de búsqueda para: ${captura}`
       for (let i = 0; i < data.results.length; i++) {
         contenido += 
           `<article class="fondo">
@@ -77,7 +73,7 @@ window.addEventListener('load', function () {
       let series= data.results
       let contenido1 = ""
       if (series.length == 0) {
-        series.style.display = 'none'
+        serie.style.display = 'none'
         
       }
       else{
