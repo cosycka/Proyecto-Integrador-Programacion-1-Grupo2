@@ -42,13 +42,14 @@ fetch(detallePelicula)
         poster.src = `https://image.tmdb.org/t/p/w500${data.poster_path}`;
         sinopsis.innerHTML = data.overview;
 
-        if(data.genres.length ==0 || data.genres == null || data.genres == undefined){
+        if (data.genres.length == 0 || data.genres == null || data.genres == undefined) {
             generos.innerHTML = `<p class=pnohayfav>La pelicula no tiene generos</p>`
         }
-        else{
+        else {
             for (let index = 0; index < data.genres.length; index++) {
-            generos.innerHTML += ` <li class="itemlista1detailmovie"> <a class="linknavdetailmovie"
-        href="./detail-genres.html?id=${data.genres[index].id}&type=pelicula">${data.genres[index].name}</a></li>`}
+                generos.innerHTML += ` <li class="itemlista1detailmovie"> <a class="linknavdetailmovie"
+        href="./detail-genres.html?id=${data.genres[index].id}&type=pelicula">${data.genres[index].name}</a></li>`
+            }
         }
 
         return data
@@ -61,38 +62,38 @@ fetch(detallePelicula)
 
 // Fetch Trailer
 fetch(trailerPelicula)
-.then(function(response){
-    return response.json();
-})
-.then(function(data){
-    let datavideos = data.results;
-    console.log(datavideos)
-    let contenidotrailer = "";
-    
-    if (datavideos == null || datavideos.length ==0 ||datavideos == undefined){
-        contenidotrailer = ` <p class=pnohayfav>La pelicula no tiene trailer disponible</p>`
-    }
-    else{
-        for (let i = 0; i < datavideos.length; i++) {
-            if (datavideos[i].type == "Trailer"){
-                contenidotrailer=` <h2 class="trailertitledetailmovie">Trailer:</h2>
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        let datavideos = data.results;
+        console.log(datavideos)
+        let contenidotrailer = "";
+
+        if (datavideos == null || datavideos.length == 0 || datavideos == undefined) {
+            contenidotrailer = ` <p class=pnohayfav>La pelicula no tiene trailer disponible</p>`
+        }
+        else {
+            for (let i = 0; i < datavideos.length; i++) {
+                if (datavideos[i].type == "Trailer") {
+                    contenidotrailer = ` <h2 class="trailertitledetailmovie">Trailer:</h2>
                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/${datavideos[i].key}"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>`
+                }
+            }
+            if (contenidotrailer == "") {
+                contenidotrailer = ` <p class=pnohayfav>La pelicula no tiene trailer disponible</p>`
             }
         }
-        if (contenidotrailer == ""){
-            contenidotrailer = ` <p class=pnohayfav>La pelicula no tiene trailer disponible</p>`
-        }
-    }
 
-    trailer.innerHTML = contenidotrailer;
-    return data
-})
-.catch(function(error){
-    console.log(error);
-})
+        trailer.innerHTML = contenidotrailer;
+        return data
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
 
 
 // Fetch de Recommendations
@@ -138,7 +139,6 @@ recobutton.addEventListener("click", function (e) {
         sectRecomendaciones = false
 
     }
-    // ver como hacer para que no aparezcan al abrir la pagina
 })
 
 
@@ -157,7 +157,7 @@ fetch(provPelicula)
         if (datosprov.US && datosprov.US.buy) {
             console.log(datosprov.US.buy);
             let provarray = datosprov.US.buy
-            
+
             for (let i = 0; i < provarray.length; i++) {
                 contenidoprov += `<li>
                                         <h4>${provarray[i].provider_name}</h4>
@@ -179,18 +179,18 @@ fetch(reviewsPelicula)
     })
     .then(function (data) {
         console.log(data.results);
-         let reviews = data.results
-         let contenidoReviews = ""
-         if (reviews.length>0){
-         for (let i = 0; i < reviews.length; i++) {
-           contenidoReviews+= `<li>
+        let reviews = data.results
+        let contenidoReviews = ""
+        if (reviews.length > 0) {
+            for (let i = 0; i < reviews.length; i++) {
+                contenidoReviews += `<li>
                 <h4> Autor: ${reviews[i].author}</h4>
                 <p> "${reviews[i].content}"</p>
             </li>`
-         }
-         listareviews.innerHTML = contenidoReviews
+            }
+            listareviews.innerHTML = contenidoReviews
         }
-         else {
+        else {
             listareviews.innerText = "No hay reviews disponibles de esta pelicula "
         }
         return data
@@ -203,7 +203,7 @@ fetch(reviewsPelicula)
 
 
 //Favoritos
-let favPeliculas= [];
+let favPeliculas = [];
 let recuperoStorage = localStorage.getItem("favPeliculas")
 
 if (recuperoStorage != null) {
@@ -213,15 +213,15 @@ if (favPeliculas.includes(idPelicula)) {
     botonfav.innerText = "Quitar de favoritos"
 }
 
-botonfav.addEventListener("click", function(e) {
+botonfav.addEventListener("click", function (e) {
     e.preventDefault()
 
     if (favPeliculas.includes(idPelicula)) {
-       let indice = favPeliculas.indexOf(idPelicula)
-       favPeliculas.splice(indice, 1);
-       botonfav.innerText = " Agregar a Favoritos"
+        let indice = favPeliculas.indexOf(idPelicula)
+        favPeliculas.splice(indice, 1);
+        botonfav.innerText = " Agregar a Favoritos"
     }
-    else{
+    else {
         favPeliculas.push(idPelicula);
         botonfav.innerText = "Quitar de Favoritos"
     }

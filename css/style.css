@@ -388,6 +388,10 @@ ul {
     text-align: center;
 }
 
+.reco{
+    display: none;
+}
+
 /*si un elemento no tiene declarado width, se le da el 100% de su padre contenedor */
 
 /* Estilo DETALLE DEL GENERO (detail-genres) */

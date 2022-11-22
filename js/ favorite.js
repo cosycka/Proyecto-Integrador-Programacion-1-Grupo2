@@ -23,20 +23,20 @@ else{
     .then(function(response){
         return response.json()
     })
-    .then(function(data){       //pongo un console log o no? osea ahora que ya lo termine en realidad no lo necesito ver
+    .then(function(data){       
         contenidopeliculasfav += `<article class="fondo">
                                         <img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" width="200" height="250" alt="imagen Mamma Mia">
                                         <p class="textoindex"> <b>${data.title}</b> <br>
                                         Fecha de estreno: ${data.release_date}</p>
                                         <a href="./detail-movie.html?id=${data.id}" class="img">Ver Mas</a>
                                     </article>`
+    sectionPeliculas.innerHTML = contenidopeliculasfav;
         
-        sectionPeliculas.innerHTML = contenidopeliculasfav;
     })
     .catch(function(error){
         console.log(error);
-    })      //hago un console.log, return o los dos?
-}  
+    })      
+}   
 }
 
 // series
@@ -69,8 +69,6 @@ else{
 }
 
 }
-
-//algunas peliculas y series se me van cuando refresco o me voy un rato y las otras no.. porque? o cuando refreso cambian el orden, esta bien?
 
 //FORMULARIO 
 
