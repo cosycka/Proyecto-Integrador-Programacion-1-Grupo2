@@ -17,7 +17,7 @@ if (peliculasfavoritas == null || peliculasfavoritas.length == 0){
 }
 else{
     for (let i = 0; i < peliculasfavoritas.length; i++) {
-    let peliculasurl = `https://api.themoviedb.org/3/movie/${peliculasfavoritas[i]}?api_key=${api_key}&language=en-US&page=1` //porque usamos este url
+    let peliculasurl = `https://api.themoviedb.org/3/movie/${peliculasfavoritas[i]}?api_key=${api_key}&language=en-US&page=1` 
 
     fetch(peliculasurl)
     .then(function(response){
@@ -46,7 +46,7 @@ if (seriesfavoritas == null || seriesfavoritas.length ==0){
 }
 else{
     for (let i = 0; i < seriesfavoritas.length; i++) {
-        let seriesurl = `https://api.themoviedb.org/3/tv/${seriesfavoritas[i]}?api_key=${api_key}&language=en-US&page=1` //porque? de donde? y pongo el otro tambien? que pasa con las pelis que no estan adentro?
+        let seriesurl = `https://api.themoviedb.org/3/tv/${seriesfavoritas[i]}?api_key=${api_key}&language=en-US&page=1` 
     
         fetch(seriesurl)
         .then(function(response){
