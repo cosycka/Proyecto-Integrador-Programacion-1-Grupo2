@@ -1,6 +1,6 @@
 //capturo qs
-let qs = location.search; // retorna una cadena de texto por lo que va a ser más difícil manipularlo en un futuro.
-let qsObj = new URLSearchParams(qs); // define métodos útiles para trabajar con los parámetros de una URL. te lo devuelve en objeto id:valor ya no seria con ?
+let qs = location.search;
+let qsObj = new URLSearchParams(qs);
 let idGenero = qsObj.get('id');
 let type = qsObj.get('type');
 console.log(idGenero)
